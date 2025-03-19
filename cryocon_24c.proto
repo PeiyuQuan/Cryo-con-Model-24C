@@ -1,0 +1,143 @@
+getIDN{out "*IDN?";in "%s";}
+setRST{out "*RST";}
+
+
+#################Input commands####################################
+stop{out "STOP";}
+control {out "CONT";}
+
+setsyslock{out "SYST:LOCK %d";}
+getsyslock{out "SYST:LOCK?"; in "%d";}
+
+####################################################################
+
+getinptem{out "INP \$1:TEMP?";in "%f";}
+
+setinpunit {out "INP \$1:UNIT %d";}
+getinpunit {out "INP \$1:UNIT?"; in "%d";}
+
+setinpname {out "INP \$1:NAM %s";}
+getinpname {out "INP \$1:NAM;" in "$s";}
+
+getinpsenpr {out "INP \$1:SENP?"; int "%f"；}
+
+setinpvbi{out "INP \$1:VBI %d";}
+getinpvbi{out "INP \$1:VBI?";in "%d";}
+
+setinpacex{out "INP \$1:ACEX %d";}
+getinpacex{out "INP \$1:ACEX?";in "%d";}
+
+setinpbran{out "INP \$1:BRAN %d";}
+getinpbran{out "INP \$1:BRAN?";in "%d";}
+
+setinpsensor {out "INP \$1:SENS %d";}
+getinpsensor {out "INP \$1:SENS?"; in "%d";}
+
+getinpsenspwr {out "INP \$1:SENSP?;" in "%f";}
+
+getinpalarm{out "INP \$1:ALAR?"; in "%d";}
+
+setinpalarhigh{out "INP \$1:ALAR:HIGH %f";}
+getinpalarhigh{out "INP \$1:ALAR:HIGH?";in "%f";}
+
+setinpalarlowe{out "INP \$1:ALAR:LOWE %f";}
+getinpalarlowe{out "INP \$1:ALAR:LOWE?";in "%f";}
+
+setinpalardea{out "INP \$1:ALAR:DEA %f";}
+getinpalardea{out "INP \$1:ALAR:DEA?";in "%f";}
+
+
+setinpalarhien{out "INP \$1:ALAR:HIEN %d";}
+getinpalarhien{out "INP \$1:ALAR:HIEN?";in "%d";}
+
+setinpalarloen{out "INP \$1:ALAR:LOEN %d";}
+getinpalarloen{out "INP \$1:ALAR:LOEN?";in "%d";}
+
+setinpalarlten{out "INP \$1:ALAR:LTEN %d";}
+getinpalarlten{out "INP \$1:ALAR:LTEN?";in "%d";}
+
+setinpalaraud{out "INP \$1:ALAR:AUD %d";}
+getinpalaraud{out "INP \$1:ALAR:AUD?";in "%d";}
+
+inpalarclear {out "INP \$1:ALAR:CLE";}
+
+getinpmin{out "INP \$1:MIN?"; in "%f";}
+getinpmax{out "INP \$1:MAX?"; in "%f";}
+getinpvar{out "INP \$1:VAR?"; in "%f";}
+getinpslo{out "INP \$1:SLO?"; in "%f";}
+getinpoffs{out "INP \$1:OFFS?";in "%f";}
+getinptim{out "INP \$1:STA:TIM?";in "%f";}
+
+inpstares{out "INP \$1:STA:RES";}
+
+setinptcof{out "INP \$1:TCOF %f";}
+getinptcof{out "INP \$1:TCOF"; in "%f";}
+
+##################################################
+
+setloopsource{out "LOOP \$1:SOUR %d";}
+getloopsource{out "LOOP \$1:SOUR";in "%d";}
+
+setloopsetp{out "LOOP \$1:SETP %f";}
+getloopsetp{out "LOOP \$1:SETP?"; in "%f";}
+
+getlooperr {out "LOOP \$1:ERR?" in "%d";}
+
+setlooptype{out "LOOP \$1:TYP %d";}
+getlooptype{out "LOOP \$1:TYP?"; in"%d";}
+
+getloop1range {out "LOOP 1:RANG?"; in "%d";}
+setloop1range {out "LOOP 1:RANG %d";}
+
+getloop2range {out "LOOP 2:RANG?"; in "%d";}
+setloop2range {out "LOOP 2:RANG %d";}
+
+getloop3range {out "LOOP 3:RANG?"; in "%d";}
+setloop3range {out "LOOP 3:RANG %d";}
+
+getloop4range {out "LOOP 3:RANG?"; in "%d";}
+setloop4range {out "LOOP 3:RANG %d";}
+
+getloopramp {out "LOOP \$1:RAMP?"; in "%d";}
+
+setlooprate{out "INP \$1:RAT %i";}
+getlooprate{out "INP \$1:RAT"; in "%i";}
+
+setlooppgain{out "INP \$1:PGA %i";}
+getlooppgain{out "INP \$1:PGA"; in "%i";}
+
+setloopigain{out "INP \$1:IGA %i";}
+getloopigain{out "INP \$1:IGA"; in "%i";}
+
+setloopdgain{out "INP \$1:DGA %i";}
+getloopdgain{out "INP \$1:DGA"; in "%i";}
+
+setlooppman{out "INP \$1:PMAN %i";}
+getlooppman{out "INP \$1:PMAN"; in "%i";}
+
+getloopoutpwr {out "LOOP \$1:OUTP?"; in "%f";}
+getloophtrread {out "LOOP \$1:HTRR?"; in "%f";}
+
+getloop1load {out "LOOP 1:LOAD?";in "%d";}
+
+setloopmaxp{out "INP \$1:MAXP %f";}
+getloopmaxp{out "INP \$1:MAXP"; in "%f";}
+
+setloopmaxs{out "INP \$1:MAXS %f";}
+getloopmaxs{out "INP \$1:MAXS"; in "%f";}
+
+getloopvsen {out "LOOP \$1:VSEN?"; in "%f";}
+getloopisen {out "LOOP \$1:ISEN?"; in "%f";}
+getlooplsen {out "LOOP \$1:LSEN?"; in "%f";}
+getloophtrh {out "LOOP \$1:HTRH?"; in "%f";}
+
+###############################################
+
+setovertemenable{out "OVER:ENAB %d";}
+getovertemenable {out "OVER:ENAB?"; in "%d";}
+
+setovertempsource {out "OVER:SOUR %d";}
+getovertempsource {out "OVER:SOUR?" in "%d";}
+
+setovertemp {out "OVER:TEMP %f";}
+getovertemp {out "OVER:TEMP?" in "%f";}
