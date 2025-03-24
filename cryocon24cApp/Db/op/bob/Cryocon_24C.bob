@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-22 21:27:00 by quan-->
+<display version="2.0.0">
+  <name>Cryocon_24C</name>
+  <x>2475</x>
+  <y>221</y>
+  <width>575</width>
+  <height>410</height>
+  <background_color>
+    <color red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <grid_step_x>5</grid_step_x>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <width>575</width>
+    <height>410</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #100</name>
+    <x>285</x>
+    <y>138</y>
+    <width>267</width>
+    <height>89</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #65</name>
+    <x>10</x>
+    <y>140</y>
+    <width>270</width>
+    <height>89</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #160</name>
+    <x>284</x>
+    <y>231</y>
+    <width>267</width>
+    <height>92</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #61</name>
+    <pv_name>$(P)$(M1)getlooperr</pv_name>
+    <x>118</x>
+    <y>199</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #156</name>
+    <x>10</x>
+    <y>231</y>
+    <width>270</width>
+    <height>89</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #6</name>
+    <text>Model</text>
+    <x>20</x>
+    <y>50</y>
+    <width>44</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #9</name>
+    <pv_name>$(P)getIDN</pv_name>
+    <x>73</x>
+    <y>46</y>
+    <width>200</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #13</name>
+    <text>Enable control mode</text>
+    <x>20</x>
+    <y>78</y>
+    <width>147</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #16</name>
+    <actions>
+      <action type="write_pv">
+        <description>Write PV</description>
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(P)control</pv_name>
+    <text>Control</text>
+    <x>200</x>
+    <y>75</y>
+    <width>64</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #19</name>
+    <text>Controller</text>
+    <x>324</x>
+    <y>45</y>
+    <width>70</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #22</name>
+    <text>Control loop</text>
+    <x>318</x>
+    <y>74</y>
+    <width>87</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #25</name>
+    <actions>
+      <action type="write_pv">
+        <description>Write PV</description>
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(P)setRST</pv_name>
+    <text>Reset</text>
+    <x>416</x>
+    <y>40</y>
+    <width>57</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #28</name>
+    <actions>
+      <action type="write_pv">
+        <description>Write PV</description>
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+      </action>
+    </actions>
+    <pv_name>$(P)stop</pv_name>
+    <text>Stop</text>
+    <x>420</x>
+    <y>72</y>
+    <width>57</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #31</name>
+    <text>System lock</text>
+    <x>20</x>
+    <y>109</y>
+    <width>87</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #34</name>
+    <pv_name>$(P)setsyslock</pv_name>
+    <x>115</x>
+    <y>106</y>
+    <width>125</width>
+    <height>20</height>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #37</name>
+    <pv_name>$(P)getsyslock</pv_name>
+    <x>240</x>
+    <y>106</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="164" green="126" blue="60">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #41</name>
+    <text>Cryocon 24C temperature controller</text>
+    <x>100</x>
+    <y>5</y>
+    <width>255</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #44</name>
+    <text>TEMP</text>
+    <x>14</x>
+    <y>171</y>
+    <width>45</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #47</name>
+    <pv_name>$(P)$(M1)getinptem</pv_name>
+    <x>57</x>
+    <y>169</y>
+    <width>125</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #51</name>
+    <pv_name>$(P)$(M1)getinpunit</pv_name>
+    <x>184</x>
+    <y>169</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="164" green="126" blue="60">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #55</name>
+    <pv_name>$(P)$(M1)setinpunit</pv_name>
+    <x>230</x>
+    <y>169</y>
+    <width>44</width>
+    <height>20</height>
+    <background_color>
+      <color red="30" green="187" blue="0">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #58</name>
+    <text>Loop Error</text>
+    <x>14</x>
+    <y>201</y>
+    <width>76</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #69</name>
+    <text>A</text>
+    <x>20</x>
+    <y>143</y>
+    <width>11</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #72</name>
+    <actions>
+      <action type="open_display">
+        <description>Input A</description>
+        <file>Cryocon_24C_inp.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Channel_A</Title>
+          <M>m1:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Input A</text>
+    <x>175</x>
+    <y>144</y>
+    <width>87</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #75</name>
+    <pv_name>$(P)$(M1)getinpname</pv_name>
+    <x>36</x>
+    <y>145</y>
+    <width>130</width>
+    <height>15</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="214" green="127" blue="226">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #79</name>
+    <text>TEMP</text>
+    <x>289</x>
+    <y>168</y>
+    <width>45</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #82</name>
+    <pv_name>$(P)$(M2)getinptem</pv_name>
+    <x>332</x>
+    <y>166</y>
+    <width>125</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #86</name>
+    <pv_name>$(P)$(M2)getinpunit</pv_name>
+    <x>459</x>
+    <y>166</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="164" green="126" blue="60">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #90</name>
+    <pv_name>$(P)$(M2)setinpunit</pv_name>
+    <x>505</x>
+    <y>166</y>
+    <width>44</width>
+    <height>20</height>
+    <background_color>
+      <color red="30" green="187" blue="0">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #93</name>
+    <text>Loop Error</text>
+    <x>289</x>
+    <y>198</y>
+    <width>76</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #96</name>
+    <pv_name>$(P)$(M2)getlooperr</pv_name>
+    <x>393</x>
+    <y>196</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #104</name>
+    <text>B</text>
+    <x>300</x>
+    <y>143</y>
+    <width>11</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #107</name>
+    <actions>
+      <action type="open_display">
+        <description>Input B</description>
+        <file>Cryocon_24C_inp.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Channel_B</Title>
+          <M>m2:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Input B</text>
+    <x>450</x>
+    <y>143</y>
+    <width>87</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #110</name>
+    <pv_name>$(P)$(M2)getinpname</pv_name>
+    <x>317</x>
+    <y>144</y>
+    <width>130</width>
+    <height>15</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="214" green="127" blue="226">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #114</name>
+    <text>TEMP</text>
+    <x>13</x>
+    <y>263</y>
+    <width>45</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #117</name>
+    <pv_name>$(P)$(M3)getinptem</pv_name>
+    <x>56</x>
+    <y>261</y>
+    <width>125</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #121</name>
+    <pv_name>$(P)$(M3)getinpunit</pv_name>
+    <x>183</x>
+    <y>261</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="164" green="126" blue="60">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #125</name>
+    <pv_name>$(P)$(M3)setinpunit</pv_name>
+    <x>229</x>
+    <y>261</y>
+    <width>44</width>
+    <height>20</height>
+    <background_color>
+      <color red="30" green="187" blue="0">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #128</name>
+    <text>Loop Error</text>
+    <x>13</x>
+    <y>293</y>
+    <width>76</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #131</name>
+    <pv_name>$(P)$(M3)getlooperr</pv_name>
+    <x>117</x>
+    <y>291</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #135</name>
+    <text>TEMP</text>
+    <x>291</x>
+    <y>266</y>
+    <width>45</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #138</name>
+    <pv_name>$(P)$(M4)getinptem</pv_name>
+    <x>334</x>
+    <y>264</y>
+    <width>125</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #142</name>
+    <pv_name>$(P)$(M4)getinpunit</pv_name>
+    <x>461</x>
+    <y>264</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="164" green="126" blue="60">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #146</name>
+    <pv_name>$(P)$(M4)setinpunit</pv_name>
+    <x>504</x>
+    <y>264</y>
+    <width>44</width>
+    <height>20</height>
+    <background_color>
+      <color red="30" green="187" blue="0">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #149</name>
+    <text>Loop Error</text>
+    <x>291</x>
+    <y>296</y>
+    <width>76</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="253" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #152</name>
+    <pv_name>$(P)$(M4)getlooperr</pv_name>
+    <x>395</x>
+    <y>294</y>
+    <width>150</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="225" green="144" blue="21">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #164</name>
+    <text>C</text>
+    <x>19</x>
+    <y>237</y>
+    <width>12</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #167</name>
+    <text>D</text>
+    <x>299</x>
+    <y>239</y>
+    <width>12</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #170</name>
+    <actions>
+      <action type="open_display">
+        <description>Input C</description>
+        <file>Cryocon_24C_inp.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Channel_C</Title>
+          <M>m3:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Input C</text>
+    <x>179</x>
+    <y>236</y>
+    <width>87</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #173</name>
+    <actions>
+      <action type="open_display">
+        <description>Input D</description>
+        <file>Cryocon_24C_inp.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Channel_D</Title>
+          <M>m4:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Input D</text>
+    <x>449</x>
+    <y>237</y>
+    <width>87</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #176</name>
+    <pv_name>$(P)$(M3)getinpname</pv_name>
+    <x>34</x>
+    <y>236</y>
+    <width>130</width>
+    <height>15</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="214" green="127" blue="226">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #180</name>
+    <pv_name>$(P)$(M4)getinpname</pv_name>
+    <x>313</x>
+    <y>238</y>
+    <width>130</width>
+    <height>15</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="214" green="127" blue="226">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #184</name>
+    <x>9</x>
+    <y>322</y>
+    <width>180</width>
+    <height>85</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #187</name>
+    <text>Load</text>
+    <x>18</x>
+    <y>350</y>
+    <width>36</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #190</name>
+    <pv_name>$(P)$(M1)setloop1load</pv_name>
+    <x>54</x>
+    <y>350</y>
+    <width>75</width>
+    <height>21</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #193</name>
+    <pv_name>$(P)$(M1)getloop1load</pv_name>
+    <x>130</x>
+    <y>351</y>
+    <width>45</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #197</name>
+    <text>Range</text>
+    <x>18</x>
+    <y>376</y>
+    <width>48</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #200</name>
+    <pv_name>$(P)$(M1)setloop1range</pv_name>
+    <x>70</x>
+    <y>375</y>
+    <width>60</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #203</name>
+    <pv_name>$(P)$(M1)getloop1range</pv_name>
+    <x>133</x>
+    <y>378</y>
+    <width>45</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #207</name>
+    <text>Loop 4</text>
+    <x>450</x>
+    <y>332</y>
+    <width>49</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #210</name>
+    <actions>
+      <action type="open_display">
+        <description>Loop 4</description>
+        <file>Cryocon_24C_loop.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Loop 4</Title>
+          <M>m4:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Loop4</text>
+    <x>509</x>
+    <y>329</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #213</name>
+    <x>445</x>
+    <y>324</y>
+    <width>126</width>
+    <height>85</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #216</name>
+    <text>Loop 2</text>
+    <x>196</x>
+    <y>333</y>
+    <width>49</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #219</name>
+    <actions>
+      <action type="open_display">
+        <description>Loop 2</description>
+        <file>Cryocon_24C_loop.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Loop2</Title>
+          <M>m2:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Loop2</text>
+    <x>254</x>
+    <y>330</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #222</name>
+    <x>190</x>
+    <y>322</y>
+    <width>126</width>
+    <height>85</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #225</name>
+    <text>Range</text>
+    <x>196</x>
+    <y>354</y>
+    <width>48</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #228</name>
+    <pv_name>$(P)$(M2)setloop2range</pv_name>
+    <x>243</x>
+    <y>353</y>
+    <width>66</width>
+    <height>23</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #231</name>
+    <pv_name>$(P)$(M2)getloop2range</pv_name>
+    <x>244</x>
+    <y>382</y>
+    <width>60</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #235</name>
+    <text>Loop 3</text>
+    <x>323</x>
+    <y>332</y>
+    <width>49</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #238</name>
+    <actions>
+      <action type="open_display">
+        <description>Loop 3</description>
+        <file>Cryocon_24C_loop.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Loop 3</Title>
+          <M>m3:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Loop3</text>
+    <x>382</x>
+    <y>329</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #241</name>
+    <x>318</x>
+    <y>322</y>
+    <width>126</width>
+    <height>85</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #244</name>
+    <text>Range</text>
+    <x>324</x>
+    <y>354</y>
+    <width>48</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #247</name>
+    <pv_name>$(P)$(M3)setloop3range</pv_name>
+    <x>371</x>
+    <y>353</y>
+    <width>66</width>
+    <height>23</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #250</name>
+    <pv_name>$(P)$(M3)getloop3range</pv_name>
+    <x>372</x>
+    <y>382</y>
+    <width>60</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #254</name>
+    <text>Range</text>
+    <x>454</x>
+    <y>355</y>
+    <width>48</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #257</name>
+    <pv_name>$(P)$(M4)setloop4range</pv_name>
+    <x>501</x>
+    <y>354</y>
+    <width>66</width>
+    <height>23</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="193" blue="135">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #260</name>
+    <pv_name>$(P)$(M4)getloop4range</pv_name>
+    <x>502</x>
+    <y>383</y>
+    <width>60</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #264</name>
+    <text>Loop 1</text>
+    <x>45</x>
+    <y>330</y>
+    <width>49</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>related display #267</name>
+    <actions>
+      <action type="open_display">
+        <description>Loop 1</description>
+        <file>Cryocon_24C_loop.opi</file>
+        <macros>
+          <P>BL62:cryocon:</P>
+          <Title>Loop 1</Title>
+          <M>m1:</M>
+        </macros>
+        <target>tab</target>
+      </action>
+    </actions>
+    <text>Loop1</text>
+    <x>101</x>
+    <y>327</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="45" green="45" blue="45">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

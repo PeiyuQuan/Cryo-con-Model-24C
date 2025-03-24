@@ -1,0 +1,1179 @@
+
+file {
+	name="/home/quan/adls/Cryocon_24C.adl"
+	version=030118
+}
+display {
+	object {
+		x=2475
+		y=221
+		width=575
+		height=410
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=20
+		y=50
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Model"
+}
+"text update" {
+	object {
+		x=73
+		y=46
+		width=200
+		height=20
+	}
+	monitor {
+		chan="$(P)getIDN"
+		clr=14
+		bclr=33
+	}
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=20
+		y=78
+		width=150
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Enable control mode"
+}
+"message button" {
+	object {
+		x=200
+		y=75
+		width=64
+		height=20
+	}
+	control {
+		chan="$(P)control"
+		clr=14
+		bclr=57
+	}
+	label="Control"
+	press_msg="1"
+}
+text {
+	object {
+		x=324
+		y=45
+		width=80
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Controller"
+}
+text {
+	object {
+		x=318
+		y=74
+		width=100
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Control loop"
+}
+"message button" {
+	object {
+		x=416
+		y=40
+		width=57
+		height=20
+	}
+	control {
+		chan="$(P)setRST"
+		clr=14
+		bclr=57
+	}
+	label="Reset"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=420
+		y=72
+		width=57
+		height=20
+	}
+	control {
+		chan="$(P)stop"
+		clr=14
+		bclr=57
+	}
+	label="Stop"
+	press_msg="1"
+}
+text {
+	object {
+		x=20
+		y=109
+		width=90
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="System lock"
+}
+"choice button" {
+	object {
+		x=115
+		y=106
+		width=125
+		height=20
+	}
+	control {
+		chan="$(P)setsyslock"
+		clr=14
+		bclr=57
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=240
+		y=106
+		width=40
+		height=20
+	}
+	monitor {
+		chan="$(P)getsyslock"
+		clr=14
+		bclr=47
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=100
+		y=5
+		width=244
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Cryocon 24C temperature controller"
+}
+text {
+	object {
+		x=14
+		y=171
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="TEMP"
+}
+"text update" {
+	object {
+		x=57
+		y=169
+		width=125
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M1)getinptem"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=184
+		y=169
+		width=40
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M1)getinpunit"
+		clr=14
+		bclr=47
+	}
+	limits {
+	}
+}
+menu {
+	object {
+		x=230
+		y=169
+		width=44
+		height=20
+	}
+	control {
+		chan="$(P)$(M1)setinpunit"
+		clr=14
+		bclr=16
+	}
+}
+text {
+	object {
+		x=14
+		y=201
+		width=80
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Loop Error"
+}
+"text update" {
+	object {
+		x=118
+		y=199
+		width=150
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M1)getlooperr"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=10
+		y=140
+		width=270
+		height=89
+	}
+	"basic attribute" {
+		clr=15
+		fill="outline"
+		width=2
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M4)getinptem"
+	}
+}
+text {
+	object {
+		x=20
+		y=143
+		width=15
+		height=18
+	}
+	"basic attribute" {
+		clr=13
+	}
+	textix="A"
+}
+"related display" {
+	object {
+		x=175
+		y=144
+		width=87
+		height=20
+	}
+	display[0] {
+		label="Input A"
+		name="Cryocon_24C_inp.adl"
+		args="P=BL62:cryocon:,Title=Channel_A,M=m1:"
+	}
+	clr=13
+	bclr=4
+}
+"text update" {
+	object {
+		x=36
+		y=145
+		width=130
+		height=15
+	}
+	monitor {
+		chan="$(P)$(M1)getinpname"
+		clr=13
+		bclr=36
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=289
+		y=168
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="TEMP"
+}
+"text update" {
+	object {
+		x=332
+		y=166
+		width=125
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M2)getinptem"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=459
+		y=166
+		width=40
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M2)getinpunit"
+		clr=14
+		bclr=47
+	}
+	limits {
+	}
+}
+menu {
+	object {
+		x=505
+		y=166
+		width=44
+		height=20
+	}
+	control {
+		chan="$(P)$(M2)setinpunit"
+		clr=14
+		bclr=16
+	}
+}
+text {
+	object {
+		x=289
+		y=198
+		width=100
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Loop Error"
+}
+"text update" {
+	object {
+		x=393
+		y=196
+		width=150
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M2)getlooperr"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=285
+		y=138
+		width=267
+		height=89
+	}
+	"basic attribute" {
+		clr=15
+		fill="outline"
+		width=2
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M4)getinptem"
+	}
+}
+text {
+	object {
+		x=300
+		y=143
+		width=15
+		height=18
+	}
+	"basic attribute" {
+		clr=13
+	}
+	textix="B"
+}
+"related display" {
+	object {
+		x=450
+		y=143
+		width=87
+		height=20
+	}
+	display[0] {
+		label="Input B"
+		name="Cryocon_24C_inp.adl"
+		args="P=BL62:cryocon:, Title= Channel_B,M=m2:"
+	}
+	clr=13
+	bclr=4
+}
+"text update" {
+	object {
+		x=317
+		y=144
+		width=130
+		height=15
+	}
+	monitor {
+		chan="$(P)$(M2)getinpname"
+		clr=13
+		bclr=36
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=13
+		y=263
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="TEMP"
+}
+"text update" {
+	object {
+		x=56
+		y=261
+		width=125
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M3)getinptem"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=183
+		y=261
+		width=40
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M3)getinpunit"
+		clr=14
+		bclr=47
+	}
+	limits {
+	}
+}
+menu {
+	object {
+		x=229
+		y=261
+		width=44
+		height=20
+	}
+	control {
+		chan="$(P)$(M3)setinpunit"
+		clr=14
+		bclr=16
+	}
+}
+text {
+	object {
+		x=13
+		y=293
+		width=100
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Loop Error"
+}
+"text update" {
+	object {
+		x=117
+		y=291
+		width=150
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M3)getlooperr"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=291
+		y=266
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="TEMP"
+}
+"text update" {
+	object {
+		x=334
+		y=264
+		width=125
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M4)getinptem"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=461
+		y=264
+		width=40
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M4)getinpunit"
+		clr=14
+		bclr=47
+	}
+	limits {
+	}
+}
+menu {
+	object {
+		x=504
+		y=264
+		width=44
+		height=20
+	}
+	control {
+		chan="$(P)$(M4)setinpunit"
+		clr=14
+		bclr=16
+	}
+}
+text {
+	object {
+		x=291
+		y=296
+		width=100
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="Loop Error"
+}
+"text update" {
+	object {
+		x=395
+		y=294
+		width=150
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M4)getlooperr"
+		clr=14
+		bclr=33
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=10
+		y=231
+		width=270
+		height=89
+	}
+	"basic attribute" {
+		clr=15
+		fill="outline"
+		width=2
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M4)getinptem"
+	}
+}
+rectangle {
+	object {
+		x=284
+		y=231
+		width=267
+		height=92
+	}
+	"basic attribute" {
+		clr=15
+		fill="outline"
+		width=2
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M4)getinptem"
+	}
+}
+text {
+	object {
+		x=19
+		y=237
+		width=15
+		height=18
+	}
+	"basic attribute" {
+		clr=13
+	}
+	textix="C"
+}
+text {
+	object {
+		x=299
+		y=239
+		width=15
+		height=18
+	}
+	"basic attribute" {
+		clr=13
+	}
+	textix="D"
+}
+"related display" {
+	object {
+		x=179
+		y=236
+		width=87
+		height=20
+	}
+	display[0] {
+		label="Input C"
+		name="Cryocon_24C_inp.adl"
+		args="P=BL62:cryocon:,Title= Channel_C,M=m3:"
+	}
+	clr=13
+	bclr=4
+}
+"related display" {
+	object {
+		x=449
+		y=237
+		width=87
+		height=20
+	}
+	display[0] {
+		label="Input D"
+		name="Cryocon_24C_inp.adl"
+		args="P=BL62:cryocon:,Title=Channel_D,M=m4:"
+	}
+	clr=13
+	bclr=4
+}
+"text update" {
+	object {
+		x=34
+		y=236
+		width=130
+		height=15
+	}
+	monitor {
+		chan="$(P)$(M3)getinpname"
+		clr=13
+		bclr=36
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=313
+		y=238
+		width=130
+		height=15
+	}
+	monitor {
+		chan="$(P)$(M4)getinpname"
+		clr=13
+		bclr=36
+	}
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=9
+		y=322
+		width=180
+		height=85
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+text {
+	object {
+		x=18
+		y=350
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Load"
+}
+"choice button" {
+	object {
+		x=54
+		y=350
+		width=75
+		height=21
+	}
+	control {
+		chan="$(P)$(M1)setloop1load"
+		clr=15
+		bclr=57
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=130
+		y=351
+		width=45
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M1)getloop1load"
+		clr=54
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=18
+		y=376
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Range"
+}
+menu {
+	object {
+		x=59
+		y=375
+		width=71
+		height=25
+	}
+	control {
+		chan="$(P)$(M1)setloop1range"
+		clr=54
+		bclr=30
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=378
+		width=45
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M1)getloop1range"
+		clr=54
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=450
+		y=332
+		width=60
+		height=15
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Loop 4"
+}
+"related display" {
+	object {
+		x=509
+		y=329
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Loop 4"
+		name="Cryocon_24C_loop.adl"
+		args="P=BL62:cryocon:,Title=Loop 4,M=m4:"
+	}
+	clr=13
+	bclr=4
+	label="Loop4"
+}
+rectangle {
+	object {
+		x=445
+		y=324
+		width=126
+		height=85
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+text {
+	object {
+		x=196
+		y=333
+		width=55
+		height=15
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Loop 2"
+}
+"related display" {
+	object {
+		x=254
+		y=330
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Loop 2"
+		name="Cryocon_24C_loop.adl"
+		args="P=BL62:cryocon:,Title= Loop2, M=m2:"
+	}
+	clr=13
+	bclr=4
+	label="Loop2"
+}
+rectangle {
+	object {
+		x=190
+		y=322
+		width=126
+		height=85
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+text {
+	object {
+		x=196
+		y=354
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Range"
+}
+"choice button" {
+	object {
+		x=243
+		y=353
+		width=66
+		height=23
+	}
+	control {
+		chan="$(P)$(M2)setloop2range"
+		clr=15
+		bclr=57
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=244
+		y=382
+		width=60
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M2)getloop2range"
+		clr=54
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=323
+		y=332
+		width=60
+		height=15
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Loop 3"
+}
+"related display" {
+	object {
+		x=382
+		y=329
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Loop 3"
+		name="Cryocon_24C_loop.adl"
+		args="P=BL62:cryocon:,Title=Loop 3, M=m3:"
+	}
+	clr=13
+	bclr=4
+	label="Loop3"
+}
+rectangle {
+	object {
+		x=318
+		y=322
+		width=126
+		height=85
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+text {
+	object {
+		x=324
+		y=354
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Range"
+}
+"choice button" {
+	object {
+		x=371
+		y=353
+		width=66
+		height=23
+	}
+	control {
+		chan="$(P)$(M3)setloop3range"
+		clr=15
+		bclr=57
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=372
+		y=382
+		width=60
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M3)getloop3range"
+		clr=54
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=454
+		y=355
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Range"
+}
+"choice button" {
+	object {
+		x=501
+		y=354
+		width=66
+		height=23
+	}
+	control {
+		chan="$(P)$(M4)setloop4range"
+		clr=15
+		bclr=57
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=502
+		y=383
+		width=60
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M4)getloop4range"
+		clr=54
+		bclr=30
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=45
+		y=330
+		width=60
+		height=15
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Loop 1"
+}
+"related display" {
+	object {
+		x=101
+		y=327
+		width=60
+		height=20
+	}
+	display[0] {
+		label="Loop 1"
+		name="Cryocon_24C_loop.adl"
+		args="P=BL62:cryocon:,Title= Loop 1,M=m1:"
+	}
+	clr=13
+	bclr=4
+	label="Loop1"
+}

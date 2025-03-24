@@ -1,0 +1,83 @@
+
+
+
+setloopsource{out "LOOP \$1:SOUR %s";}
+getloopsource{out "LOOP \$1:SOUR";in "%s";}
+
+setloopsetp{out "LOOP \$1:SETP %s";}
+getloopsetp{out "LOOP \$1:SETP?"; in "%s";}
+
+getlooperr {out "LOOP \$1:ERR?"; in "%{--Htr OK--|-Overtemp-|OTDisconn|Htr_Low-R|Fan Fault}";}
+
+setlooptype{out "LOOP \$1:TYP %{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}"}
+getlooptype{out "LOOP \$1:TYP?"; in"%{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}"}
+
+getloop1range {out "LOOP 1:RANG?"; in "%s";}
+setloop1range {out "LOOP 1:RANG %s";}
+
+getloop2range {out "LOOP 2:RANG?"; in "%s";}
+setloop2range {out "LOOP 2:RANG %s";}
+
+getloop3range {out "LOOP 3:RANG?"; in "%s";}
+setloop3range {out "LOOP 3:RANG %s";}
+
+getloop4range {out "LOOP 4:RANG?"; in "%s";}
+setloop4range {out "LOOP 4:RANG %s";}
+
+getloopramp {out "LOOP \$1:RAMP?"; in "%{NO |OFF}";}
+
+setlooprate{out "LOOP \$1:RAT %s";}
+getlooprate{out "LOOP \$1:RAT"; in "%s";}
+
+setlooppgain{out "LOOP \$1:PGA %s";}
+getlooppgain{out "LOOP \$1:PGA"; in "%s";}
+
+setloopigain{out "LOOP \$1:IGA %s";}
+getloopigain{out "LOOP \$1:IGA"; in "%s";}
+
+setloopdgain{out "LOOP \$1:DGA %s";}
+getloopdgain{out "LOOP \$1:DGA"; in "%s";}
+
+setlooppman{out "LOOP \$1:PMAN %s";}
+getlooppman{out "LOOP \$1:PMAN"; in "%s";}
+
+getloopoutpwr {out "LOOP \$1:OUTP?"; in "%f";}
+
+getloophtrread {out "LOOP \$1:HTRR?"; in "%s";}
+
+setloop1load {out "LOOP 1:LOAD %{50|25}";}
+getloop1load {out "LOOP 1:LOAD?";in "%{50|25}";}
+
+setloopmaxp{out "LOOP \$1:MAXP %s";}
+getloopmaxp{out "LOOP \$1:MAXP"; in "%s";}
+
+setloopmaxs{out "LOOP \$1:MAXS %s";}
+getloopmaxs{out "LOOP \$1:MAXS"; in "%s";}
+
+getloopvsen {out "LOOP \$1:VSEN?"; in "%s";}
+getloopisen {out "LOOP \$1:ISEN?"; in "%s";}
+getlooplsen {out "LOOP \$1:LSEN?"; in "%f";}
+getloophtrh {out "LOOP \$1:HTRH?"; in "%s";}
+
+
+################################Loop autotune#############
+
+setloopautostart {out "LOOP \$1:AUT:STAR";}
+setloopautoexit {out "LOOP \$1:AUT:EXIT";}
+setloopautosave {out "LOOP \$1:AUT:SAVE";}
+
+getloopautomode {out "LOOP \$1:AUT:MOD?"; in "%{P |PI |PID}";}
+setloopautomode {out "LOOP \$1:AUT:MOD %{P |PI |PID}";}
+
+getloopautodelt {out "LOOP \$1:AUT:MOD?";in"%i";}
+setloopautodelt {out "LOOP \$1:AUT:MOD? %i";}
+
+getloopautotim {out "LOOP \$1:AUT:TIM?";in"%i";}
+setloopautotim {out "LOOP \$1:AUT:TIM? %i";}
+
+getloopautopga{out "LOOP \$1:AUT:PGA?"; in "%s";}
+getloopautoiga{out "LOOP \$1:AUT:iGA?"; in "%s";}
+getloopautodga{out "LOOP \$1:AUT:dGA?"; in "%s";}
+getloopautostat{out "LOOP \$1:AUT:STAT?"; in "%s";}
+
+

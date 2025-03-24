@@ -1,0 +1,435 @@
+record (mbbi, $(P)$(M)getloopsource)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopsource($(N)) $(PORT)")
+		field(SCAN,"1 second")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "CHA")
+		field(ONST, "CHB")
+		field(TWST, "CHC")
+		field(THST, "CHD")
+	}
+	
+record (mbbo, $(P)$(M)setloopsource)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopsource($(N)) $(PORT)")
+		field(SCAN,"1 second")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "CHA")
+		field(ONST, "CHB")
+		field(TWST, "CHC")
+		field(THST, "CHD")
+	}
+	
+record (stringin, $(P)$(M)getloopsetp)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopsetp($(N)) $(PORT)")
+		field(SCAN,"1 second")
+	}
+	
+record (stringout, $(P)$(M)setloopsetp)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopsetp($(N)) $(PORT)")
+	}
+	
+record (mbbi, $(P)$(M)getlooperr)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooperr($(N)) $(PORT)")
+		field(SCAN,"1 second")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(ZRST, "--Htr OK--")
+		field(ONST, "-Overtemp-")
+		field(TWST, "OTDisconn")
+		field(THST, "Htr-Low-R")
+		field(FRST, "Fan Fault")
+	}
+	
+record (mbbi, $(P)$(M)getlooptype)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooptype($(N)) $(PORT)")
+		field(SCAN,"1 second")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(FVVL, 5)
+		field(ZRST, "OFF")
+		field(ONST, "PID")
+		field(TWST, "MAN")
+		field(THST, "TABLE")
+		field(FRST, "RAMPP")
+		field(FVST, "RAMPT")
+	}
+	
+record (mbbo, $(P)$(M)setlooptype)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setlooptype($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(FVVL, 5)
+		field(ZRST, "OFF  ")
+		field(ONST, "PID  ")
+		field(TWST, "MAN  ")
+		field(THST, "TABLE")
+		field(FRST, "RAMPP")
+		field(FVST, "RAMPT")
+	}
+	
+record (mbbi, $(P)$(M)getloop1range)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloop1range $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(ZRST, "LOW")
+		field(ONST, "MID")
+		field(TWST, "HI")
+		field(SCAN,".5 second")
+	}
+	
+record (mbbo, $(P)$(M)setloop1range)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloop1range $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(ZRST, "LOW")
+		field(ONST, "MID")
+		field(TWST, "HI")
+	}
+
+record (bi, $(P)$(M)getloop2range)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloop2range $(PORT)")
+		field(SCAN,".5 second")
+		field(ZNAM, "LOW")
+		field(ONAM, "HI")
+	}
+	
+record (bo, $(P)$(M)setloop2range)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloop2range $(PORT)")
+		field(ZNAM, "LOW")
+		field(ONAM, "HI")
+	}
+	
+record (bi, $(P)$(M)getloop3range)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloop3range $(PORT)")
+		field(SCAN,".5 second")
+		field(ZNAM, "5V")
+		field(ONAM, "10V")
+	}
+	
+record (bo, $(P)$(M)setloop3range)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloop3range $(PORT)")
+		field(ZNAM, "5V")
+		field(ONAM, "10V")
+	}
+	
+record (bi, $(P)$(M)getloop4range)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloop4range $(PORT)")
+		field(SCAN,".5 second")
+		field(ZNAM, "5V")
+		field(ONAM, "10V")
+	}
+	
+record (bo, $(P)$(M)setloop4range)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloop4range $(PORT)")
+		field(ZNAM, "5V")
+		field(ONAM, "10V")
+	}
+	
+record (bi, $(P)$(M)getloopramp)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopramp($(N)) $(PORT)")
+		field(SCAN,".5 second")
+		field(ZNAM, "OFF")
+		field(ONAM, "ON")
+	}
+
+
+record (stringin, $(P)$(M)getlooprate)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooprate($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setlooprate)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setlooprate($(N)) $(PORT)")
+	}
+	
+record (stringin, $(P)$(M)getlooppgain)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooppgain($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setlooppgain)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setlooppgain($(N)) $(PORT)")
+	}
+	
+record (stringin, $(P)$(M)getloopigain)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopigain($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setloopigain)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopigain($(N)) $(PORT)")
+	}
+	
+record (stringin, $(P)$(M)getloopdgain)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopdgain($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setloopdgain)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopdgain($(N)) $(PORT)")
+	}
+	
+record (stringin, $(P)$(M)getlooppman)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooppman($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setlooppman)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setlooppman($(N)) $(PORT)")
+	}
+	
+record (ai, $(P)$(M)getloopoutpwr)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopoutpwr($(N)) $(PORT)")
+		field(SCAN,".5 second")
+		field(PREC,"3")
+	}
+	
+record (stringin, $(P)$(M)getloophtrread)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloophtrread($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (bi, $(P)$(M)getloop1load)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloop1load($(N)) $(PORT)")
+		field(SCAN,".5 second")
+		field(ZNAM, "25")
+		field(ONAM, "50")
+	}
+	
+record (bo, $(P)$(M)setloop1load)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloop1load($(N)) $(PORT)")
+		field(ZNAM, "25")
+		field(ONAM, "50")
+	}
+
+record (stringin, $(P)$(M)getloopmaxs)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopmaxs($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setloopmaxs)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopmaxs($(N)) $(PORT)")
+	}
+	
+record (stringin, $(P)$(M)getloopmaxp)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopmaxp($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, $(P)$(M)setloopmaxp)
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopmaxp($(N)) $(PORT)")
+	}
+
+	
+record (stringin, $(P)$(M)getloopvsen)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopvsen($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringin, $(P)$(M)getloopisen)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopisen($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (ai, $(P)$(M)getlooplsen)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getlooplsen($(N)) $(PORT)")
+		field(SCAN,".5 second")
+		field(PREC,"3")
+	}
+	
+record (stringin, $(P)$(M)getloophtrh)
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloophtrh($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+
+
+###########LOOP Auto#################
+record (bo, "$(P)$(M)setloopautostart")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c_loop.proto setloopautostart($(N)) $(PORT)")
+	}
+	
+record (bo, "$(P)$(M)setloopautoexit")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c_loop.proto setloopautoexit($(N)) $(PORT)")
+	}
+	
+record (bo, "$(P)$(M)setloopautosave")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c_loop.proto setloopautosave($(N)) $(PORT)")
+	}
+	
+record (mbbi, "$(P)$(M)getloopautomode")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautomode($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(ZRST, "P")
+		field(ONST, "PI")
+		field(TWST, "PID")
+		field(SCAN,"1 second")
+	}
+	
+record (mbbo, "$(P)$(M)setloopautomode")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopautomode($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(ZRST, "P")
+		field(ONST, "PI")
+		field(TWST, "PID")
+	}
+	
+record (stringin, "$(P)$(M)getloopautodelt")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautodelt($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, "$(P)$(M)setloopautodelt")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopautodelt($(N)) $(PORT)")
+	}
+	
+record (stringin, "$(P)$(M)getloopautotim")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautotim($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringout, "$(P)$(M)setloopautotim")
+	{
+		field(DTYP,"stream")
+		field(OUT,"@cryocon_24c_loop.proto setloopautotim($(N)) $(PORT)")
+	}
+	
+record (stringin, "$(P)$(M)getloopautopga")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautopga($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringin, "$(P)$(M)getloopautoiga")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautoiga($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringin, "$(P)$(M)getloopautodga")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautodga($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+	
+record (stringin, "$(P)$(M)getloopautostat")
+	{
+		field(DTYP,"stream")
+		field(INP,"@cryocon_24c_loop.proto getloopautostat($(N)) $(PORT)")
+		field(SCAN,".5 second")
+	}
+

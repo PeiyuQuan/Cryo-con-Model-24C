@@ -1,0 +1,1017 @@
+
+file {
+	name="/home/quan/adls/Cryocon_24C_inp.adl"
+	version=030118
+}
+display {
+	object {
+		x=2478
+		y=125
+		width=510
+		height=350
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=10
+		y=41
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Name"
+}
+"text entry" {
+	object {
+		x=55
+		y=36
+		width=140
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setinpname"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=7
+		y=58
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Senpr"
+}
+"text update" {
+	object {
+		x=55
+		y=58
+		width=140
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M)getinpsenpr"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=15
+		y=82
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Vbias"
+}
+menu {
+	object {
+		x=62
+		y=83
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setinpvbi"
+		clr=14
+		bclr=25
+	}
+}
+"text update" {
+	object {
+		x=154
+		y=83
+		width=80
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getinpvbi"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=17
+		y=107
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="ACEX"
+}
+"choice button" {
+	object {
+		x=62
+		y=105
+		width=90
+		height=21
+	}
+	control {
+		chan="$(P)$(M)setinpacex"
+		clr=14
+		bclr=30
+	}
+	stacking="column"
+}
+"text update" {
+	object {
+		x=154
+		y=107
+		width=80
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getinpacex"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=247
+		y=82
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Brange"
+}
+menu {
+	object {
+		x=299
+		y=86
+		width=90
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setinpbran"
+		clr=14
+		bclr=25
+	}
+}
+"text update" {
+	object {
+		x=391
+		y=86
+		width=80
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getinpbran"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=242
+		y=109
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Tcoffset"
+}
+"text entry" {
+	object {
+		x=306
+		y=109
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setinptcof"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=390
+		y=109
+		width=80
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getinptcof"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+composite {
+	object {
+		x=5
+		y=133
+		width=263
+		height=204
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=24
+				y=141
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Alarm"
+		}
+		"text update" {
+			object {
+				x=80
+				y=141
+				width=140
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarm"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=18
+				y=165
+				width=55
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Highest"
+		}
+		"text entry" {
+			object {
+				x=80
+				y=165
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setinpalarhigh"
+				clr=14
+				bclr=45
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=162
+				y=165
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarhigh"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=23
+				y=187
+				width=55
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Lowest"
+		}
+		"text entry" {
+			object {
+				x=80
+				y=187
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setinpalarlowe"
+				clr=14
+				bclr=45
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=162
+				y=187
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarlowe"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=15
+				y=211
+				width=63
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Deadband"
+		}
+		"text entry" {
+			object {
+				x=80
+				y=211
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setinpalardea"
+				clr=14
+				bclr=45
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=162
+				y=211
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalardea"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=28
+				y=235
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Hiena"
+		}
+		"choice button" {
+			object {
+				x=80
+				y=233
+				width=90
+				height=21
+			}
+			control {
+				chan="$(P)$(M)setinpalarhien"
+				clr=14
+				bclr=30
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=172
+				y=235
+				width=50
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarhien"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=32
+				y=259
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Loen"
+		}
+		"choice button" {
+			object {
+				x=80
+				y=257
+				width=90
+				height=21
+			}
+			control {
+				chan="$(P)$(M)setinpalarloen"
+				clr=14
+				bclr=30
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=172
+				y=259
+				width=50
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarloen"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=30
+				y=283
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Ltena"
+		}
+		"choice button" {
+			object {
+				x=80
+				y=281
+				width=90
+				height=21
+			}
+			control {
+				chan="$(P)$(M)setinpalarlten"
+				clr=14
+				bclr=30
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=172
+				y=283
+				width=50
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalarlten"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=30
+				y=307
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Audio"
+		}
+		"choice button" {
+			object {
+				x=80
+				y=305
+				width=90
+				height=21
+			}
+			control {
+				chan="$(P)$(M)setinpalaraud"
+				clr=14
+				bclr=30
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=172
+				y=307
+				width=50
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getinpalaraud"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=5
+				y=133
+				width=263
+				height=204
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M)getinpsensor"
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=277
+		y=132
+		width=164
+		height=143
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=286
+				y=139
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Min"
+		}
+		"text update" {
+			object {
+				x=334
+				y=139
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpmin"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=285
+				y=162
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Max"
+		}
+		"text update" {
+			object {
+				x=333
+				y=162
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpmax"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=284
+				y=185
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Var"
+		}
+		"text update" {
+			object {
+				x=332
+				y=185
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpvar"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=284
+				y=209
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Slope"
+		}
+		"text update" {
+			object {
+				x=332
+				y=209
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpslo"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=283
+				y=233
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="OFFset"
+		}
+		"text update" {
+			object {
+				x=331
+				y=233
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpoffs"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=283
+				y=254
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Time"
+		}
+		"text update" {
+			object {
+				x=331
+				y=254
+				width=100
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinptim"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=277
+				y=132
+				width=164
+				height=143
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M)getinptim"
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=275
+		y=279
+		width=186
+		height=20
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=275
+				y=279
+				width=45
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Senspwr"
+		}
+		"text update" {
+			object {
+				x=333
+				y=279
+				width=75
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M)getinpsenspwr"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=419
+				y=281
+				width=42
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Watts"
+		}
+	}
+}
+text {
+	object {
+		x=275
+		y=302
+		width=180
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Reset statistical data"
+}
+"message button" {
+	object {
+		x=459
+		y=301
+		width=40
+		height=18
+	}
+	control {
+		chan="$(P)$(M)inpstares"
+		clr=14
+		bclr=50
+	}
+	label="reset"
+	press_msg="1"
+}
+text {
+	object {
+		x=201
+		y=34
+		width=45
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sensor"
+}
+menu {
+	object {
+		x=254
+		y=35
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setinpsensor"
+		clr=14
+		bclr=25
+	}
+}
+"text update" {
+	object {
+		x=255
+		y=59
+		width=120
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getinpsensor"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+composite {
+	object {
+		x=277
+		y=320
+		width=83
+		height=19
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=277
+				y=321
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Clear"
+		}
+		"message button" {
+			object {
+				x=320
+				y=320
+				width=40
+				height=18
+			}
+			control {
+				chan="$(P)$(M)inpalarclear"
+				clr=14
+				bclr=51
+			}
+			label="Clear"
+			press_msg="1"
+		}
+	}
+}
+text {
+	object {
+		x=176
+		y=3
+		width=114
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="$(Title)"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=474
+		y=108
+		width=15
+		height=18
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="K"
+}

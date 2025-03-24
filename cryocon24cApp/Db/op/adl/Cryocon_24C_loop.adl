@@ -1,0 +1,1143 @@
+
+file {
+	name="/home/quan/adls/Cryocon_24C_loop.adl"
+	version=030118
+}
+display {
+	object {
+		x=2134
+		y=576
+		width=500
+		height=370
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=183
+		y=2
+		width=102
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="$(Title)"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=18
+		y=131
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Vsense"
+}
+text {
+	object {
+		x=17
+		y=154
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Isense"
+}
+text {
+	object {
+		x=16
+		y=177
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Lsense"
+}
+text {
+	object {
+		x=16
+		y=201
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Htrhst"
+}
+rectangle {
+	object {
+		x=5
+		y=124
+		width=190
+		height=100
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M)getinptim"
+	}
+}
+"text update" {
+	object {
+		x=83
+		y=131
+		width=100
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopvsen"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=83
+		y=154
+		width=100
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopisen"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=83
+		y=177
+		width=100
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooplsen"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=83
+		y=201
+		width=100
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloophtrh"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=10
+		y=35
+		width=50
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Source"
+}
+text {
+	object {
+		x=16
+		y=78
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Error"
+}
+menu {
+	object {
+		x=70
+		y=33
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopsource"
+		clr=14
+		bclr=45
+	}
+}
+"text update" {
+	object {
+		x=70
+		y=80
+		width=130
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooperr"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=18
+		y=55
+		width=30
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Type"
+}
+menu {
+	object {
+		x=70
+		y=57
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setlooptype"
+		clr=14
+		bclr=45
+	}
+}
+text {
+	object {
+		x=10
+		y=102
+		width=45
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="OutPower"
+}
+"text update" {
+	object {
+		x=78
+		y=102
+		width=120
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopoutpwr"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=152
+		y=35
+		width=65
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopsource"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=152
+		y=57
+		width=65
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooptype"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=220
+		y=31
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Setpoint"
+}
+"text entry" {
+	object {
+		x=287
+		y=31
+		width=100
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopsetp"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=393
+		y=31
+		width=100
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopsetp"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=220
+		y=55
+		width=60
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="HTRRead"
+}
+"text update" {
+	object {
+		x=287
+		y=55
+		width=120
+		height=20
+	}
+	monitor {
+		chan="$(P)$(M)getloophtrread"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=410
+		y=56
+		width=40
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ramp"
+}
+"text update" {
+	object {
+		x=443
+		y=55
+		width=50
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopramp"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+polyline {
+	object {
+		x=-1
+		y=244
+		width=503
+		height=3
+	}
+	"basic attribute" {
+		clr=14
+		width=3
+	}
+	points {
+		(0,245)
+		(500,245)
+	}
+}
+text {
+	object {
+		x=190
+		y=251
+		width=111
+		height=18
+	}
+	"basic attribute" {
+		clr=64
+	}
+	textix="Loop Autotune"
+}
+composite {
+	object {
+		x=10
+		y=272
+		width=160
+		height=90
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=18
+				y=276
+				width=55
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Igain"
+		}
+		text {
+			object {
+				x=18
+				y=298
+				width=55
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Dgain"
+		}
+		text {
+			object {
+				x=18
+				y=320
+				width=55
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Pgain"
+		}
+		rectangle {
+			object {
+				x=10
+				y=272
+				width=160
+				height=90
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+		}
+		"text update" {
+			object {
+				x=66
+				y=276
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautoiga"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=66
+				y=298
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautodga"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=66
+				y=320
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautopga"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=14
+				y=339
+				width=50
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Status"
+		}
+		"text update" {
+			object {
+				x=66
+				y=340
+				width=100
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautostat"
+				clr=14
+				bclr=25
+			}
+			limits {
+			}
+		}
+	}
+}
+"message button" {
+	object {
+		x=423
+		y=283
+		width=49
+		height=19
+	}
+	control {
+		chan="$(P)$(M)setloopautostart"
+		clr=60
+		bclr=4
+	}
+	label="Start"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=424
+		y=308
+		width=49
+		height=19
+	}
+	control {
+		chan="$(P)$(M)setloopautoexit"
+		clr=60
+		bclr=4
+	}
+	label="Exit"
+	press_msg="1"
+}
+"message button" {
+	object {
+		x=423
+		y=332
+		width=49
+		height=19
+	}
+	control {
+		chan="$(P)$(M)setloopautosave"
+		clr=60
+		bclr=4
+	}
+	label="Save"
+	press_msg="1"
+}
+composite {
+	object {
+		x=190
+		y=280
+		width=221
+		height=74
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=194
+				y=283
+				width=30
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Mode"
+		}
+		"text update" {
+			object {
+				x=331
+				y=282
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getlooptype"
+				clr=14
+				bclr=25
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=190
+				y=310
+				width=48
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Deltap"
+		}
+		text {
+			object {
+				x=190
+				y=335
+				width=48
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Timeout"
+		}
+		menu {
+			object {
+				x=247
+				y=280
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setlooptype"
+				clr=14
+				bclr=45
+			}
+		}
+		"text entry" {
+			object {
+				x=247
+				y=308
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setloopautodelt"
+				clr=14
+				bclr=45
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=247
+				y=334
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(M)setloopautotim"
+				clr=14
+				bclr=45
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=330
+				y=310
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautodelt"
+				clr=14
+				bclr=25
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=330
+				y=335
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M)getloopautotim"
+				clr=14
+				bclr=25
+			}
+			align="horiz. right"
+			limits {
+			}
+		}
+	}
+}
+rectangle {
+	object {
+		x=200
+		y=79
+		width=295
+		height=160
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+	}
+	"dynamic attribute" {
+		chan="$(P)$(M)getinpsensor"
+	}
+}
+text {
+	object {
+		x=208
+		y=82
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maxpower"
+}
+text {
+	object {
+		x=203
+		y=104
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Maxsetpoint"
+}
+text {
+	object {
+		x=228
+		y=127
+		width=35
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Rate"
+}
+text {
+	object {
+		x=223
+		y=149
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Igain"
+}
+text {
+	object {
+		x=223
+		y=171
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Dgain"
+}
+text {
+	object {
+		x=223
+		y=193
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pgain"
+}
+text {
+	object {
+		x=221
+		y=217
+		width=55
+		height=18
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Pmanual"
+}
+text {
+	object {
+		x=468
+		y=190
+		width=15
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="%"
+}
+text {
+	object {
+		x=465
+		y=170
+		width=15
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="/s"
+}
+"text entry" {
+	object {
+		x=291
+		y=82
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopmaxp"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=82
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopmaxp"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=291
+		y=104
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopmaxs"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=104
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopmaxs"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=291
+		y=127
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setlooprate"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=127
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooprate"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=291
+		y=149
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopigain"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=149
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopigain"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=291
+		y=171
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setloopdgain"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=171
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getloopdgain"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=291
+		y=193
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setlooppgain"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=374
+		y=193
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooppgain"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=290
+		y=215
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(M)setlooppman"
+		clr=14
+		bclr=45
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=373
+		y=216
+		width=90
+		height=18
+	}
+	monitor {
+		chan="$(P)$(M)getlooppman"
+		clr=14
+		bclr=25
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=466
+		y=148
+		width=15
+		height=20
+	}
+	"basic attribute" {
+		clr=20
+	}
+	textix="S"
+}

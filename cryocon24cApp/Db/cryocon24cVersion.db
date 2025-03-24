@@ -1,0 +1,6 @@
+record(lsi, "$(user):cryocon24c:version") {
+    field(DTYP, "cryocon24c version")
+    field(DESC, "Version string")
+    field(SIZV, "$(SIZV=200)")
+    field(PINI, "YES")
+}

@@ -1,0 +1,87 @@
+getIDN{out "*IDN?";in "%s";}
+setRST{out "*RST";}
+
+
+#################Input commands####################################
+stop{out "STOP";}
+control {out "CONT";}
+
+setsyslock{out "SYST:LOCK %{NO |OFF}";}
+getsyslock{out "SYST:LOCK?"; in "%{NO |OFF}";}
+
+####################################################################
+
+getinptem{out "INP \$1:TEMP?";in "%s";}
+
+setinpunit {out "INP \$1:UNIT %s";}
+getinpunit {out "INP \$1:UNIT?"; in "%s";}
+
+setinpname {out "INP \$1:NAM %15c";}
+getinpname {out "INP \$1:NAM?"; in "%15c";}
+
+getinpsenpr {out "INP \$1:SENP?"; in "%s";}
+
+setinpvbi{out "INP \$1:VBI %{10MV |3.0MV|1.0MV|300UV|200UV|100UV}";}
+getinpvbi{out "INP \$1:VBI?";in "%{10MV |3.0MV|1.0MV|300UV|200UV|100UV}";}
+
+setinpacex{out "INP \$1:ACEX %{ON |OFF}";}
+getinpacex{out "INP \$1:ACEX?";in "%{ON |OFF}";}
+
+setinpbran{out "INP \$1:BRAN %{AUTO |1.0MA|100UA|10UA|1.0UA}";}
+getinpbran{out "INP \$1:BRAN?";in "%{AUTO |1.0MA|100UA|10UA|1.0UA}";}
+
+setinpsensor {out "INP \$1:SENS %i";}
+getinpsensor {out "INP \$1:SENS?"; in "%i";}
+
+getinpsenspwr {out "INP \$1:SENSP?"; in "%s";}
+
+getinpalarm{out "INP \$1:ALAR?"; in "%i";}
+
+setinpalarhigh{out "INP \$1:ALAR:HIGH %s";}
+getinpalarhigh{out "INP \$1:ALAR:HIGH?";in "%s";}
+
+setinpalarlowe{out "INP \$1:ALAR:LOWE %s";}
+getinpalarlowe{out "INP \$1:ALAR:LOWE?";in "%s";}
+
+setinpalardea{out "INP \$1:ALAR:DEA %s";}
+getinpalardea{out "INP \$1:ALAR:DEA?";in "%s";}
+
+
+setinpalarhien{out "INP \$1:ALAR:HIEN %{YES|NO }";}
+getinpalarhien{out "INP \$1:ALAR:HIEN?";in "%{YES|NO }";}
+
+setinpalarloen{out "INP \$1:ALAR:LOEN %{YES|NO }";}
+getinpalarloen{out "INP \$1:ALAR:LOEN?";in "%{YES|NO }";}
+
+setinpalarlten{out "INP \$1:ALAR:LTEN %{YES|NO }";}
+getinpalarlten{out "INP \$1:ALAR:LTEN?";in "%{YES|NO }";}
+
+setinpalaraud{out "INP \$1:ALAR:AUD %{YES|NO }";}
+getinpalaraud{out "INP \$1:ALAR:AUD?";in "%{YES|NO }";}
+
+inpalarclear {out "INP \$1:ALAR:CLE";}
+
+getinpmin{out "INP \$1:MIN?"; in "%s";}
+getinpmax{out "INP \$1:MAX?"; in "%s";}
+getinpvar{out "INP \$1:VAR?"; in "%s";}
+
+getinpslo{out "INP \$1:SLO?"; in "%s";}
+getinpoffs{out "INP \$1:OFFS?";in "%s";}
+getinptim{out "INP \$1:STA:TIM?";in "%s";}
+
+inpstares{out "INP \$1:STA:RES";}
+
+setinptcof{out "INP \$1:TCOF %s";}
+getinptcof{out "INP \$1:TCOF?"; in "%s";}
+
+###############################################
+
+setovertemenable{out "OVER:ENAB %{NO |OFF}";}
+getovertemenable {out "OVER:ENAB?"; in "%{NO |OFF}";}
+
+setovertempsource {out "OVER:SOUR %s";}
+getovertempsource {out "OVER:SOUR?"; in "%s";}
+
+setovertemp {out "OVER:TEMP %s";}
+getovertemp {out "OVER:TEMP?"; in "%s";}
+
