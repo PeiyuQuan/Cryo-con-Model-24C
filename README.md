@@ -1,1 +1,1 @@
-# Cryo-con-Model-24C
+# EPICS driver for Cryocon-24C-temperature controller, Ethernet port
