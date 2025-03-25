@@ -69,11 +69,11 @@ setloopautosave {out "LOOP \$1:AUT:SAVE";}
 getloopautomode {out "LOOP \$1:AUT:MOD?"; in "%{P |PI |PID}";}
 setloopautomode {out "LOOP \$1:AUT:MOD %{P |PI |PID}";}
 
-getloopautodelt {out "LOOP \$1:AUT:MOD?";in"%i";}
-setloopautodelt {out "LOOP \$1:AUT:MOD? %i";}
+getloopautodelt {out "LOOP \$1:AUT:MOD?";in"%s";}
+setloopautodelt {out "LOOP \$1:AUT:MOD? %s";}
 
-getloopautotim {out "LOOP \$1:AUT:TIM?";in"%i";}
-setloopautotim {out "LOOP \$1:AUT:TIM? %i";}
+getloopautotim {out "LOOP \$1:AUT:TIM?";in"%s";}
+setloopautotim {out "LOOP \$1:AUT:TIM? %s";}
 
 getloopautopga{out "LOOP \$1:AUT:PGA?"; in "%s";}
 getloopautoiga{out "LOOP \$1:AUT:iGA?"; in "%s";}
