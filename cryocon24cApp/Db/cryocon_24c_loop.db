@@ -313,7 +313,7 @@ record (stringin, $(P)$(M)getlooppgain)
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_loop.proto getlooppgain($(N)) $(PORT)")
-		field(SCAN, "2 second")
+		field(SCAN, "1 second")
 	}
 	
 record (ao, $(P)$(M)setlooppgain)
@@ -327,7 +327,7 @@ record (stringin, $(P)$(M)getloopigain)
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_loop.proto getloopigain($(N)) $(PORT)")
-		field(SCAN, "2 second")
+		field(SCAN, "1 second")
 	}
 	
 record (ao, $(P)$(M)setloopigain)
@@ -341,7 +341,7 @@ record (stringin, $(P)$(M)getloopdgain)
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_loop.proto getloopdgain($(N)) $(PORT)")
-		field(SCAN, "2 second")
+		field(SCAN, "1 second")
 	}
 	
 record (ao, $(P)$(M)setloopdgain)
@@ -357,7 +357,7 @@ record (stringin, $(P)$(M)getlooppman)
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_loop.proto getlooppman($(N)) $(PORT)")
-		field(SCAN, "2 second")
+		field(SCAN, "1 second")
 	}
 	
 record (ao, $(P)$(M)setlooppman)
