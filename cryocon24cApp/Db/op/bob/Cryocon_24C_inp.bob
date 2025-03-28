@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-22 21:28:02 by quan-->
+<!--Saved on 2025-03-27 18:54:42 by specadm-->
 <display version="2.0.0">
   <name>Cryocon_24C_inp</name>
-  <x>2488</x>
-  <y>133</y>
+  <x>287</x>
+  <y>280</y>
   <width>510</width>
-  <height>350</height>
+  <height>180</height>
   <background_color>
     <color red="187" green="187" blue="187">
     </color>
@@ -18,7 +18,7 @@
     <x>10</x>
     <y>41</y>
     <width>43</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -45,914 +45,11 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>text #13</name>
-    <text>Senpr</text>
-    <x>7</x>
-    <y>58</y>
-    <width>43</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #16</name>
-    <pv_name>$(P)$(M)getinpsenpr</pv_name>
-    <x>55</x>
-    <y>58</y>
-    <width>140</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>1</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #20</name>
-    <text>Vbias</text>
-    <x>15</x>
-    <y>82</y>
-    <width>41</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>menu #23</name>
-    <pv_name>$(P)$(M)setinpvbi</pv_name>
-    <x>62</x>
-    <y>83</y>
-    <width>90</width>
-    <height>20</height>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #26</name>
-    <pv_name>$(P)$(M)getinpvbi</pv_name>
-    <x>154</x>
-    <y>83</y>
-    <width>80</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #30</name>
-    <text>ACEX</text>
-    <x>17</x>
-    <y>107</y>
-    <width>44</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="choice" version="2.0.0">
-    <name>choice button #33</name>
-    <pv_name>$(P)$(M)setinpacex</pv_name>
-    <x>62</x>
-    <y>105</y>
-    <width>90</width>
-    <height>21</height>
-    <background_color>
-      <color red="251" green="243" blue="74">
-      </color>
-    </background_color>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <items>
-      <item>Item 1</item>
-      <item>Item 2</item>
-    </items>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #36</name>
-    <pv_name>$(P)$(M)getinpacex</pv_name>
-    <x>154</x>
-    <y>107</y>
-    <width>80</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #40</name>
-    <text>Brange</text>
-    <x>247</x>
-    <y>82</y>
-    <width>52</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>menu #43</name>
-    <pv_name>$(P)$(M)setinpbran</pv_name>
-    <x>299</x>
-    <y>86</y>
-    <width>90</width>
-    <height>20</height>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #46</name>
-    <pv_name>$(P)$(M)getinpbran</pv_name>
-    <x>391</x>
-    <y>86</y>
-    <width>80</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #50</name>
-    <text>Tcoffset</text>
-    <x>242</x>
-    <y>109</y>
-    <width>57</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>text entry #53</name>
-    <pv_name>$(P)$(M)setinptcof</pv_name>
-    <x>306</x>
-    <y>109</y>
-    <width>80</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="199" green="187" blue="109">
-      </color>
-    </background_color>
-    <format>1</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #57</name>
-    <pv_name>$(P)$(M)getinptcof</pv_name>
-    <x>390</x>
-    <y>109</y>
-    <width>80</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>composite #61</name>
-    <x>5</x>
-    <y>133</y>
-    <width>263</width>
-    <height>204</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>rectangle #144</name>
-      <width>263</width>
-      <height>204</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #64</name>
-      <text>Alarm</text>
-      <x>19</x>
-      <y>8</y>
-      <width>42</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #67</name>
-      <pv_name>$(P)$(M)getinpalarm</pv_name>
-      <x>75</x>
-      <y>8</y>
-      <width>140</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #71</name>
-      <text>Highest</text>
-      <x>13</x>
-      <y>32</y>
-      <width>55</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>text entry #74</name>
-      <pv_name>$(P)$(M)setinpalarhigh</pv_name>
-      <x>75</x>
-      <y>32</y>
-      <width>80</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="199" green="187" blue="109">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #78</name>
-      <pv_name>$(P)$(M)getinpalarhigh</pv_name>
-      <x>157</x>
-      <y>32</y>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #82</name>
-      <text>Lowest</text>
-      <x>18</x>
-      <y>54</y>
-      <width>51</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>text entry #85</name>
-      <pv_name>$(P)$(M)setinpalarlowe</pv_name>
-      <x>75</x>
-      <y>54</y>
-      <width>80</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="199" green="187" blue="109">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #89</name>
-      <pv_name>$(P)$(M)getinpalarlowe</pv_name>
-      <x>157</x>
-      <y>54</y>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #93</name>
-      <text>Deadband</text>
-      <x>10</x>
-      <y>78</y>
-      <width>74</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>text entry #96</name>
-      <pv_name>$(P)$(M)setinpalardea</pv_name>
-      <x>75</x>
-      <y>78</y>
-      <width>80</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="199" green="187" blue="109">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #100</name>
-      <pv_name>$(P)$(M)getinpalardea</pv_name>
-      <x>157</x>
-      <y>78</y>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #104</name>
-      <text>Hiena</text>
-      <x>23</x>
-      <y>102</y>
-      <width>42</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="choice" version="2.0.0">
-      <name>choice button #107</name>
-      <pv_name>$(P)$(M)setinpalarhien</pv_name>
-      <x>75</x>
-      <y>100</y>
-      <width>90</width>
-      <height>21</height>
-      <background_color>
-        <color red="251" green="243" blue="74">
-        </color>
-      </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <items>
-        <item>Item 1</item>
-        <item>Item 2</item>
-      </items>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #110</name>
-      <pv_name>$(P)$(M)getinpalarhien</pv_name>
-      <x>167</x>
-      <y>102</y>
-      <width>50</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #114</name>
-      <text>Loen</text>
-      <x>27</x>
-      <y>126</y>
-      <width>36</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="choice" version="2.0.0">
-      <name>choice button #117</name>
-      <pv_name>$(P)$(M)setinpalarloen</pv_name>
-      <x>75</x>
-      <y>124</y>
-      <width>90</width>
-      <height>21</height>
-      <background_color>
-        <color red="251" green="243" blue="74">
-        </color>
-      </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <items>
-        <item>Item 1</item>
-        <item>Item 2</item>
-      </items>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #120</name>
-      <pv_name>$(P)$(M)getinpalarloen</pv_name>
-      <x>167</x>
-      <y>126</y>
-      <width>50</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #124</name>
-      <text>Ltena</text>
-      <x>25</x>
-      <y>150</y>
-      <width>41</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="choice" version="2.0.0">
-      <name>choice button #127</name>
-      <pv_name>$(P)$(M)setinpalarlten</pv_name>
-      <x>75</x>
-      <y>148</y>
-      <width>90</width>
-      <height>21</height>
-      <background_color>
-        <color red="251" green="243" blue="74">
-        </color>
-      </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <items>
-        <item>Item 1</item>
-        <item>Item 2</item>
-      </items>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #130</name>
-      <pv_name>$(P)$(M)getinpalarlten</pv_name>
-      <x>167</x>
-      <y>150</y>
-      <width>50</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #134</name>
-      <text>Audio</text>
-      <x>25</x>
-      <y>174</y>
-      <width>41</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="choice" version="2.0.0">
-      <name>choice button #137</name>
-      <pv_name>$(P)$(M)setinpalaraud</pv_name>
-      <x>75</x>
-      <y>172</y>
-      <width>90</width>
-      <height>21</height>
-      <background_color>
-        <color red="251" green="243" blue="74">
-        </color>
-      </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <items>
-        <item>Item 1</item>
-        <item>Item 2</item>
-      </items>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #140</name>
-      <pv_name>$(P)$(M)getinpalaraud</pv_name>
-      <x>167</x>
-      <y>174</y>
-      <width>50</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>composite #148</name>
-    <x>277</x>
-    <y>132</y>
-    <width>164</width>
-    <height>143</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>text #151</name>
-      <text>Min</text>
-      <x>9</x>
-      <y>7</y>
-      <width>26</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #154</name>
-      <pv_name>$(P)$(M)getinpmin</pv_name>
-      <x>57</x>
-      <y>7</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #158</name>
-      <text>Max</text>
-      <x>8</x>
-      <y>30</y>
-      <width>31</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #161</name>
-      <pv_name>$(P)$(M)getinpmax</pv_name>
-      <x>56</x>
-      <y>30</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #165</name>
-      <text>Var</text>
-      <x>7</x>
-      <y>53</y>
-      <width>25</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #168</name>
-      <pv_name>$(P)$(M)getinpvar</pv_name>
-      <x>55</x>
-      <y>53</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #172</name>
-      <text>Slope</text>
-      <x>7</x>
-      <y>77</y>
-      <width>41</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #175</name>
-      <pv_name>$(P)$(M)getinpslo</pv_name>
-      <x>55</x>
-      <y>77</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #179</name>
-      <text>OFFset</text>
-      <x>6</x>
-      <y>101</y>
-      <width>54</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #182</name>
-      <pv_name>$(P)$(M)getinpoffs</pv_name>
-      <x>54</x>
-      <y>101</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #186</name>
-      <text>Time</text>
-      <x>6</x>
-      <y>122</y>
-      <width>36</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #189</name>
-      <pv_name>$(P)$(M)getinptim</pv_name>
-      <x>54</x>
-      <y>122</y>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>rectangle #193</name>
-      <width>164</width>
-      <height>143</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>composite #197</name>
-    <x>275</x>
-    <y>279</y>
-    <width>186</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>text #200</name>
-      <text>Senspwr</text>
-      <width>63</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>text update #203</name>
-      <pv_name>$(P)$(M)getinpsenspwr</pv_name>
-      <x>58</x>
-      <width>75</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="88" green="147" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <show_units>false</show_units>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>text #207</name>
-      <text>Watts</text>
-      <x>144</x>
-      <y>2</y>
-      <width>41</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color red="253" green="0" blue="0">
-        </color>
-      </foreground_color>
-      <auto_size>true</auto_size>
-    </widget>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #210</name>
-    <text>Reset statistical data</text>
-    <x>275</x>
-    <y>302</y>
-    <width>148</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <auto_size>true</auto_size>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>message button #213</name>
-    <pv_name>$(P)$(M)inpstares</pv_name>
-    <text>reset</text>
-    <x>459</x>
-    <y>301</y>
-    <width>40</width>
-    <height>18</height>
-    <background_color>
-      <color red="153" green="255" blue="255">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>text #216</name>
     <text>Sensor</text>
     <x>201</x>
     <y>34</y>
     <width>51</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -960,7 +57,7 @@
     <auto_size>true</auto_size>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>menu #219</name>
+    <name>menu #16</name>
     <pv_name>$(P)$(M)setinpsensor</pv_name>
     <x>254</x>
     <y>35</y>
@@ -972,60 +69,8 @@
     </background_color>
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>text update #222</name>
-    <pv_name>$(P)$(M)getinpsensor</pv_name>
-    <x>255</x>
-    <y>59</y>
-    <width>120</width>
-    <height>18</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="88" green="147" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <show_units>false</show_units>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>composite #226</name>
-    <x>277</x>
-    <y>320</y>
-    <width>83</width>
-    <height>19</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="label" version="2.0.0">
-      <name>text #229</name>
-      <text>Clear</text>
-      <y>1</y>
-      <width>39</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <auto_size>true</auto_size>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>message button #232</name>
-      <pv_name>$(P)$(M)inpalarclear</pv_name>
-      <text>Clear</text>
-      <x>43</x>
-      <width>40</width>
-      <height>18</height>
-      <background_color>
-        <color red="115" green="223" blue="255">
-        </color>
-      </background_color>
-    </widget>
-  </widget>
   <widget type="label" version="2.0.0">
-    <name>text #235</name>
+    <name>text #19</name>
     <text>$(Title)</text>
     <x>176</x>
     <y>3</y>
@@ -1040,15 +85,473 @@
     </foreground_color>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle</name>
-    <width>500</width>
-    <height>340</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="MAJOR" red="255" green="0" blue="0">
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #22</name>
+    <pv_name>$(P)$(M)getinpsensor</pv_name>
+    <x>376</x>
+    <y>37</y>
+    <width>120</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
       </color>
-    </line_color>
-    <transparent>true</transparent>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #26</name>
+    <text>Vbias</text>
+    <x>12</x>
+    <y>59</y>
+    <width>41</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>menu #29</name>
+    <pv_name>$(P)$(M)setinpvbi</pv_name>
+    <x>59</x>
+    <y>60</y>
+    <width>90</width>
+    <height>20</height>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #32</name>
+    <pv_name>$(P)$(M)getinpvbi</pv_name>
+    <x>151</x>
+    <y>60</y>
+    <width>80</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #36</name>
+    <text>Alarm</text>
+    <x>11</x>
+    <y>84</y>
+    <width>42</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #39</name>
+    <pv_name>$(P)$(M)getinpalarm</pv_name>
+    <x>67</x>
+    <y>84</y>
+    <width>140</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #43</name>
+    <text>Highest</text>
+    <x>5</x>
+    <y>108</y>
+    <width>55</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #46</name>
+    <pv_name>$(P)$(M)setinpalarhigh</pv_name>
+    <x>67</x>
+    <y>108</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="199" green="187" blue="109">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #50</name>
+    <pv_name>$(P)$(M)getinpalarhigh</pv_name>
+    <x>149</x>
+    <y>108</y>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #54</name>
+    <text>Lowest</text>
+    <x>10</x>
+    <y>130</y>
+    <width>51</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #57</name>
+    <pv_name>$(P)$(M)setinpalarlowe</pv_name>
+    <x>67</x>
+    <y>130</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="199" green="187" blue="109">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #61</name>
+    <pv_name>$(P)$(M)getinpalarlowe</pv_name>
+    <x>149</x>
+    <y>130</y>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #65</name>
+    <text>Deadband</text>
+    <x>2</x>
+    <y>154</y>
+    <width>74</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #68</name>
+    <pv_name>$(P)$(M)setinpalardea</pv_name>
+    <x>67</x>
+    <y>154</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="199" green="187" blue="109">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #72</name>
+    <pv_name>$(P)$(M)getinpalardea</pv_name>
+    <x>149</x>
+    <y>154</y>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #76</name>
+    <text>Hiena</text>
+    <x>272</x>
+    <y>59</y>
+    <width>42</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #79</name>
+    <pv_name>$(P)$(M)setinpalarhien</pv_name>
+    <x>324</x>
+    <y>57</y>
+    <width>90</width>
+    <height>21</height>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #82</name>
+    <pv_name>$(P)$(M)getinpalarhien</pv_name>
+    <x>416</x>
+    <y>59</y>
+    <width>50</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #86</name>
+    <text>Loen</text>
+    <x>276</x>
+    <y>83</y>
+    <width>36</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #89</name>
+    <pv_name>$(P)$(M)setinpalarloen</pv_name>
+    <x>324</x>
+    <y>81</y>
+    <width>90</width>
+    <height>21</height>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #92</name>
+    <pv_name>$(P)$(M)getinpalarloen</pv_name>
+    <x>416</x>
+    <y>83</y>
+    <width>50</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #96</name>
+    <text>Ltena</text>
+    <x>274</x>
+    <y>107</y>
+    <width>41</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #99</name>
+    <pv_name>$(P)$(M)setinpalarlten</pv_name>
+    <x>324</x>
+    <y>105</y>
+    <width>90</width>
+    <height>21</height>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #102</name>
+    <pv_name>$(P)$(M)getinpalarlten</pv_name>
+    <x>416</x>
+    <y>107</y>
+    <width>50</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #106</name>
+    <text>Audio</text>
+    <x>274</x>
+    <y>131</y>
+    <width>41</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>choice button #109</name>
+    <pv_name>$(P)$(M)setinpalaraud</pv_name>
+    <x>324</x>
+    <y>129</y>
+    <width>90</width>
+    <height>21</height>
+    <background_color>
+      <color red="251" green="243" blue="74">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #112</name>
+    <pv_name>$(P)$(M)getinpalaraud</pv_name>
+    <x>416</x>
+    <y>131</y>
+    <width>50</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="88" green="147" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #116</name>
+    <text>ClearAlarm</text>
+    <x>262</x>
+    <y>152</y>
+    <width>81</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <auto_size>true</auto_size>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>message button #119</name>
+    <pv_name>$(P)$(M)clearalarm</pv_name>
+    <text>Clear</text>
+    <x>352</x>
+    <y>154</y>
+    <width>90</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
   </widget>
 </display>
