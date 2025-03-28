@@ -3,7 +3,7 @@ record (stringin, "$(P)getIDN")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getIDN $(PORT)")
-		field(SCAN, "1 second")
+		field(SCAN, "10 second")
 	}
 	
 record (bo, "$(P)setRST")
@@ -11,41 +11,13 @@ record (bo, "$(P)setRST")
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setRST $(PORT)")
 	}
-	
-record (bo, "$(P)stop")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto stop $(PORT)")
-	}
 
-record (bo, "$(P)control")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto control $(PORT)")
-	}
-
-record (bi, "$(P)getsyslock")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getsyslock $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON")
-		field(SCAN, "1 second")
-	}
-	
-record (bo, "$(P)setsyslock")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto setsyslock $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON")
-	}
 
 record (stringin, "$(P)$(M)getinptem")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getinptem($(N)) $(PORT)")
-		field(SCAN, "1 second")
+		field(SCAN, ".5 second")
 	}
 	
 record (mbbi, "$(P)$(M)getinpunit")
@@ -60,7 +32,7 @@ record (mbbi, "$(P)$(M)getinpunit")
 		field(ONST, "C")
 		field(TWST, "F")
 		field(THST, "S")
-		field(SCAN, "1 second")
+		field(SCAN, "2 second")
 	}
 	
 record (mbbo, "$(P)$(M)setinpunit")
@@ -82,7 +54,7 @@ record (stringin, "$(P)$(M)getinpname")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getinpname($(N)) $(PORT)")
-		field(SCAN, "1 second")
+		field(SCAN, "5 second")
 	}
 	
 record (stringout, "$(P)$(M)setinpname")
@@ -90,13 +62,7 @@ record (stringout, "$(P)$(M)setinpname")
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setinpname($(N)) $(PORT)")
 	}
-	
-record (stringin, "$(P)$(M)getinpsenpr")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpsenpr($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
+
 	
 record (mbbi, "$(P)$(M)getinpvbi")
 	{
@@ -107,14 +73,12 @@ record (mbbi, "$(P)$(M)getinpvbi")
 		field(TWVL, 2)
 		field(THVL, 3)
 		field(FRVL, 4)
-		field(FRVL, 5)
-		field(ZRST, "10MV")
-		field(ONST, "3.0MV")
-		field(TWST, "1.0MV")
-		field(THST, "300UV")
-		field(FRST, "200UV")
-		field(FRST, "100UV")
-		field(SCAN, "1 second")
+		field(ZRST, "N/A")
+                field(ONST, "10MV")
+                field(TWST, "2.0MV")
+                field(THST, "1.0MV")
+                field(FRST, "300UV")
+		field(SCAN, "2 second")
 	}
 	
 record (mbbo, "$(P)$(M)setinpvbi")
@@ -126,63 +90,11 @@ record (mbbo, "$(P)$(M)setinpvbi")
 		field(TWVL, 2)
 		field(THVL, 3)
 		field(FRVL, 4)
-		field(FRVL, 5)
-		field(ZRST, "10MV")
-		field(ONST, "3.0MV")
-		field(TWST, "1.0MV")
-		field(THST, "300UV")
-		field(FRST, "200UV")
-		field(FRST, "100UV")
-	}
-
-record (bi, "$(P)$(M)getinpacex")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpacex($(N)) $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON")
-		field(SCAN, "1 second")
-	}
-	
-record (bo, "$(P)$(M)setinpacex")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto setinpacex($(N)) $(PORT)")
-		field(ZNAM, "OFF")
-		field(ONAM, "ON")
-	}
-	
-record (mbbi, "$(P)$(M)getinpbran")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpbran($(N)) $(PORT)")
-		field(ZRVL, 0)
-		field(ONVL, 1)
-		field(TWVL, 2)
-		field(THVL, 3)
-		field(FRVL, 4)
-		field(ZRST, "AUTO ")
-		field(ONST, "1.0 MA")
-		field(TWST, "100 UA")
-		field(THST, "10 UA")
-		field(FRST, "1.0 UA")
-		field(SCAN, "1 second")
-	}
-	
-record (mbbo, "$(P)$(M)setinpbran")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto setinpbran($(N)) $(PORT)")
-		field(ZRVL, 0)
-		field(ONVL, 1)
-		field(TWVL, 2)
-		field(THVL, 3)
-		field(FRVL, 4)
-		field(ZRST, "AUTO ")
-		field(ONST, "1.0 MA")
-		field(TWST, "100 UA")
-		field(THST, "10 UA")
-		field(FRST, "1.0 UA")
+		field(ZRST, "N/A")
+		field(ONST, "10MV")
+		field(TWST, "2.0MV")
+		field(THST, "1.0MV")
+		field(FRST, "300UV")
 	}
 	
 record (mbbi, "$(P)$(M)getinpsensor")
@@ -257,13 +169,7 @@ record (mbbo, "$(P)$(M)setinpsensor")
 		field(TTST, "TC AuFe .07%")
 		field(FTST, "Internal")
 	}
-	
-record (stringin, "$(P)$(M)getinpsenspwr")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpsenspwr($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
+
 	
 record (mbbi, "$(P)$(M)getinpalarm")
 	{
@@ -277,47 +183,46 @@ record (mbbi, "$(P)$(M)getinpalarm")
 		field(ONST, "SF")
 		field(TWST, "HI")
 		field(THST, "LO")
-		field(SCAN, "1 second")
+		field(SCAN, "2 second")
 	}
 	
-record (stringin, "$(P)$(M)getinpalarhigh")
+record (ai, "$(P)$(M)getinpalarhigh")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getinpalarhigh($(N)) $(PORT)")
-#		field(PREC, "3")
-		field(SCAN, "1 second")
+		field(PREC, 3)
+		field(SCAN, "2 second")
 	}
 
-record (stringout, "$(P)$(M)setinpalarhigh")
+record (ao, "$(P)$(M)setinpalarhigh")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setinpalarhigh($(N)) $(PORT)")
-#		field(PREC, "3")
 	}
 
-record (stringin, "$(P)$(M)getinpalarlowe")
+record (ai, "$(P)$(M)getinpalarlowe")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getinpalarlowe($(N)) $(PORT)")
-#		field(PREC, "3")
-		field(SCAN, "1 second")
+		field(PREC, 3)
+		field(SCAN, "2 second")
 	}
 
-record (stringout, "$(P)$(M)setinpalarlowe")
+record (ao, "$(P)$(M)setinpalarlowe")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setinpalarlowe($(N)) $(PORT)")
-#		field(PREC, "3")
 	}
 	
 record (stringin, "$(P)$(M)getinpalardea")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getinpalardea($(N)) $(PORT)")
-		field(SCAN, "1 second")
+#		field(PREC, 3)
+		field(SCAN, "2 second")
 	}
 
-record (stringout, "$(P)$(M)setinpalardea")
+record (ao, "$(P)$(M)setinpalardea")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setinpalardea($(N)) $(PORT)")
@@ -390,80 +295,17 @@ record (bi, "$(P)$(M)getinpalaraud")
 		field(ONAM, "YES")
 		field(SCAN, "1 second")
 	}
-	
-record (bo, "$(P)$(M)inpalarclear")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto inpalarclear($(N)) $(PORT)")
-	}
-	
 
-record (stringin, "$(P)$(M)getinpmin")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpmin($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
-	
-record (stringin, "$(P)$(M)getinpmax")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpmax($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
+record(bo,"$(P)$(M)clearalarm")
 
-record (stringin, "$(P)$(M)getinpvar")
 	{
 		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpvar($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
-	
-record (stringin, "$(P)$(M)getinpslo")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpslo($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
-	
-record (stringin, "$(P)$(M)getinpoffs")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinpoffs($(N)) $(PORT)")
-		field(SCAN, "1 second")
-#		field(PREC, "3")
-	}
-	
-record (stringin, "$(P)$(M)getinptim")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinptim($(N)) $(PORT)")
-		field(SCAN, "1 second")
-	}
-	
-record (bo, "$(P)$(M)inpstares")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto inpstares($(N)) $(PORT)")
-	}
-
-
-record (stringout, "$(P)$(M)setinptcof")
-	{
-		field(DTYP, "stream")
-		field(OUT, "@cryocon_24c_inp.proto setinptcof($(N)) $(PORT)")
-	}
-	
-record (stringin, "$(P)$(M)getinptcof")
-	{
-		field(DTYP, "stream")
-		field(INP, "@cryocon_24c_inp.proto getinptcof($(N)) $(PORT)")
-		field(SCAN, "1 second")
+                field(OUT, "@cryocon_24c_inp.proto clearalarm($(N)) $(PORT)")
 	}
 	
 ########################over temperature#########################
 	
-record (bo, "$(P)$(M)setovertemenable")
+record (bo, "$(P)setovertemenable")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setovertemenable $(PORT)")
@@ -471,16 +313,16 @@ record (bo, "$(P)$(M)setovertemenable")
 		field(ONAM, "ON")
 	}
 	
-record (bi, "$(P)$(M)getovertemenable")
+record (bi, "$(P)getovertemenable")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getovertemenable $(PORT)")
 		field(ZNAM, "OFF")
 		field(ONAM, "ON")
-		field(SCAN, "1 second")
+		field(SCAN, "2 second")
 	}
 	
-record (mbbi, "$(P)$(M)getovertempsource")
+record (mbbi, "$(P)getovertempsource")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getovertempsource $(PORT)")
@@ -492,10 +334,10 @@ record (mbbi, "$(P)$(M)getovertempsource")
 		field(ONST, "CHB")
 		field(TWST, "CHC")
 		field(THST, "CHD")
-		field(SCAN, "1 second")
+		field(SCAN, "2 second")
 	}
 	
-record (mbbo, "$(P)$(M)setovertempsource")
+record (mbbo, "$(P)setovertempsource")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setovertempsource $(PORT)")
@@ -509,16 +351,17 @@ record (mbbo, "$(P)$(M)setovertempsource")
 		field(THST, "CHD")
 	}
 	
-record (stringin, "$(P)$(M)getovertemp")
+record (stringin, "$(P)getovertemp")
 	{
 		field(DTYP, "stream")
 		field(INP, "@cryocon_24c_inp.proto getovertemp $(PORT)")
-		field(SCAN, "1 second")
+		field(SCAN, "2 second")
 	}
 	
-record (stringout, "$(P)$(M)setovertemp")
+record (ao, "$(P)setovertemp")
 	{
 		field(DTYP, "stream")
 		field(OUT, "@cryocon_24c_inp.proto setovertemp $(PORT)")
+		field(PREC, 3)
 	}
 	
