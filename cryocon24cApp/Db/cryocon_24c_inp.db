@@ -1,0 +1,365 @@
+
+record (stringin, "$(P)getIDN")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getIDN $(PORT)")
+		field(SCAN, "10 second")
+		field(FLNK, "$(P)getovertemenable")
+	}
+	
+record (bo, "$(P)setRST")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setRST $(PORT)")
+	}
+
+record (bo, "$(P)setovertemenable")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setovertemenable $(PORT)")
+		field(ZNAM, "OFF")
+		field(ONAM, "ON")
+	}
+	
+record (bi, "$(P)getovertemenable")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getovertemenable $(PORT)")
+		field(ZNAM, "OFF")
+		field(ONAM, "ON")
+		field(FLNK, "$(P)getovertempsource")
+	}
+	
+record (mbbi, "$(P)getovertempsource")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getovertempsource $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "CHA")
+		field(ONST, "CHB")
+		field(TWST, "CHC")
+		field(THST, "CHD")
+		field(FLNK, "$(P)getovertemp")
+	}
+	
+record (mbbo, "$(P)setovertempsource")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setovertempsource $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "CHA")
+		field(ONST, "CHB")
+		field(TWST, "CHC")
+		field(THST, "CHD")
+	}
+	
+record (stringin, "$(P)getovertemp")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getovertemp $(PORT)")
+	}
+	
+record (ao, "$(P)setovertemp")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setovertemp $(PORT)")
+		field(PREC, 3)
+	}
+
+
+record (stringin, "$(P)$(M)getinptem")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinptem($(N)) $(PORT)")
+		field(SCAN, "10 second")
+		field(FLNK, "$(P)$(M)getinpunit")
+	}
+	
+record (mbbi, "$(P)$(M)getinpunit")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpunit($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "K")
+		field(ONST, "C")
+		field(TWST, "F")
+		field(THST, "S")
+		field(FLNK, "$(P)$(M)getinpname")
+	}
+	
+record (mbbo, "$(P)$(M)setinpunit")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpunit($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "K")
+		field(ONST, "C")
+		field(TWST, "F")
+		field(THST, "S")
+	}
+	
+	
+record (stringin, "$(P)$(M)getinpname")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpname($(N)) $(PORT)")
+		field(FLNK, "$(P)$(M)getinpsensor")
+	}
+	
+record (stringout, "$(P)$(M)setinpname")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpname($(N)) $(PORT)")
+	}
+
+
+record (mbbi, "$(P)$(M)getinpsensor")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpsensor($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(FVVL, 5)
+		field(SXVL, 6)
+		field(SVVL, 7)
+		field(EIVL, 8)
+		field(NIVL, 9)
+		field(TEVL, 10)
+		field(ELVL, 11)
+		field(TVVL, 12)
+		field(TTVL, 13)
+		field(FTVL, 14)
+		field(ZRST, "None")
+		field(ONST, "Cryo-con S900")
+		field(TWST, "LS DT-670")
+		field(THST, "LS DT-470")
+		field(FRST, "Cryo-con S950")
+		field(FVST, "SI 410 Diode")
+		field(SXST, "Pt100 385")
+		field(SVST, "Pt1K 385")
+		field(EIST, "Pt10K 385")
+		field(NIST, "RO-600C")
+		field(TEST, "TC Type K")
+		field(ELST, "TC Type E")
+		field(TVST, "TC Type T")
+		field(TTST, "TC AuFe .07%")
+		field(FTST, "Internal")
+		field(FLNK, "$(P)$(M)getinpalarm")
+	}
+	
+record (mbbo, "$(P)$(M)setinpsensor")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpsensor($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(FVVL, 5)
+		field(SXVL, 6)
+		field(SVVL, 7)
+		field(EIVL, 8)
+		field(NIVL, 9)
+		field(TEVL, 10)
+		field(ELVL, 11)
+		field(TVVL, 12)
+		field(TTVL, 13)
+		field(FTVL, 14)
+		field(ZRST, "None")
+		field(ONST, "Cryo-con S900")
+		field(TWST, "LS DT-670")
+		field(THST, "LS DT-470")
+		field(FRST, "Cryo-con S950")
+		field(FVST, "SI 410 Diode")
+		field(SXST, "Pt100 385")
+		field(SVST, "Pt1K 385")
+		field(EIST, "Pt10K 385")
+		field(NIST, "RO-600C")
+		field(TEST, "TC Type K")
+		field(ELST, "TC Type E")
+		field(TVST, "TC Type T")
+		field(TTST, "TC AuFe .07%")
+		field(FTST, "Internal")
+	}
+
+	
+record (mbbi, "$(P)$(M)getinpalarm")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarm($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(ZRST, "--")
+		field(ONST, "SF")
+		field(TWST, "HI")
+		field(THST, "LO")
+		field(FLNK, "$(P)$(M)getinpalarhigh")
+	}
+	
+record (ai, "$(P)$(M)getinpalarhigh")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarhigh($(N)) $(PORT)")
+		field(PREC, 3)
+		field(FLNK, "$(P)$(M)getinpalarlowe")
+	}
+
+record (ao, "$(P)$(M)setinpalarhigh")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalarhigh($(N)) $(PORT)")
+	}
+
+record (ai, "$(P)$(M)getinpalarlowe")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarlowe($(N)) $(PORT)")
+		field(PREC, 3)
+		field(FLNK, "$(P)$(M)getinpalardea")
+	}
+
+record (ao, "$(P)$(M)setinpalarlowe")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalarlowe($(N)) $(PORT)")
+	}
+	
+record (stringin, "$(P)$(M)getinpalardea")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalardea($(N)) $(PORT)")
+		field(FLNK, "$(P)$(M)getinpalarhien")
+	}
+
+record (ao, "$(P)$(M)setinpalardea")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalardea($(N)) $(PORT)")
+	}
+	
+record (bo, "$(P)$(M)setinpalarhien")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalarhien($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+	}
+	
+record (bi, "$(P)$(M)getinpalarhien")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarhien($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+		field(FLNK, "$(P)$(M)getinpalarloen")
+	}
+	
+record (bo, "$(P)$(M)setinpalarloen")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalarloen($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+	}
+	
+record (bi, "$(P)$(M)getinpalarloen")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarloen($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+		field(FLNK, "$(P)$(M)getinpalarlten")
+	}
+	
+record (bo, "$(P)$(M)setinpalarlten")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalarlten($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+	}
+	
+record (bi, "$(P)$(M)getinpalarlten")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalarlten($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+		field(FLNK, "$(P)$(M)getinpalaraud")
+	}
+	
+record (bo, "$(P)$(M)setinpalaraud")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpalaraud($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+	}
+	
+record (bi, "$(P)$(M)getinpalaraud")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpalaraud($(N)) $(PORT)")
+		field(ZNAM, "NO")
+		field(ONAM, "YES")
+		field(FLNK, "$(P)$(M)getinpvbi")
+	}
+
+record(bo,"$(P)$(M)clearalarm")
+
+	{
+		field(DTYP, "stream")
+                field(OUT, "@cryocon_24c.proto clearalarm($(N)) $(PORT)")
+	}
+	
+record (mbbi, "$(P)$(M)getinpvbi")
+	{
+		field(DTYP, "stream")
+		field(INP, "@cryocon_24c.proto getinpvbi($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(ZRST, "N/A")
+                field(ONST, "10MV")
+                field(TWST, "2.0MV")
+                field(THST, "1.0MV")
+                field(FRST, "300UV")
+	}
+	
+record (mbbo, "$(P)$(M)setinpvbi")
+	{
+		field(DTYP, "stream")
+		field(OUT, "@cryocon_24c.proto setinpvbi($(N)) $(PORT)")
+		field(ZRVL, 0)
+		field(ONVL, 1)
+		field(TWVL, 2)
+		field(THVL, 3)
+		field(FRVL, 4)
+		field(ZRST, "N/A")
+		field(ONST, "10MV")
+		field(TWST, "2.0MV")
+		field(THST, "1.0MV")
+		field(FRST, "300UV")
+	}
+
+

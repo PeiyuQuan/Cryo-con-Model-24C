@@ -1,0 +1,110 @@
+
+
+getIDN{out "*IDN?"; in "%25c";}
+setRST{out "*RST";}
+
+stop{out "STOP";}
+control {out "CONT";}
+
+#################Input commands####################################
+
+getinptem{out "INP \$1:TEMP?";in "%s";}
+
+setinpunit {out "INP \$1:UNIT %{K|C|F|S}";}
+getinpunit {out "INP \$1:UNIT?"; in "%{K|C|F|S}";}
+
+setinpname {out "INP \$1:NAM %s";}
+getinpname {out "INP \$1:NAM?"; in "%15c";}
+
+
+setinpvbi{out "INP \$1:VBI %{N/A  |10MV |3.0MV|1.0MV|300UV}";}
+getinpvbi{out "INP \$1:VBI?"; in "%{N/A  |10MV |3.0MV|1.0MV|300UV}";}
+
+setinpsensor {out "INP \$1:SENS %i";}
+getinpsensor {out "INP \$1:SENS?"; in "%i";}
+
+getinpalarm{out "INP \$1:ALAR?"; in "%{--|SF|HI|LO}";}
+
+setinpalarhigh{out "INP \$1:ALAR:HIGH %f";}
+getinpalarhigh{out "INP \$1:ALAR:HIGH?"; in "%f";}
+
+setinpalarlowe{out "INP \$1:ALAR:LOWE %f";}
+getinpalarlowe{out "INP \$1:ALAR:LOWE?"; in "%f";}
+
+setinpalardea{out "INP \$1:ALAR:DEA %f";}
+getinpalardea{out "INP \$1:ALAR:DEA?"; in "%s";}
+
+
+setinpalarhien{out "INP \$1:ALAR:HIEN %{NO |YES}";}
+getinpalarhien{out "INP \$1:ALAR:HIEN?"; in "%{NO |YES}";}
+
+setinpalarloen{out "INP \$1:ALAR:LOEN %{NO |YES}";}
+getinpalarloen{out "INP \$1:ALAR:LOEN?"; in "%{NO |YES}";}
+
+setinpalarlten{out "INP \$1:ALAR:LTEN %{NO |YES}";}
+getinpalarlten{out "INP \$1:ALAR:LTEN?"; in "%{NO |YES}";}
+
+setinpalaraud{out "INP \$1:ALAR:AUD %{NO |YES}";}
+getinpalaraud{out "INP \$1:ALAR:AUD?"; in "%{NO |YES}";}
+
+clearalarm {out "INP \$1:ALAR:CLE";}
+###############################################
+
+setovertemenable{out "OVER:ENAB %{OFF|ON }";}
+getovertemenable {out "OVER:ENAB?"; in "%{OFF|ON }";}
+
+setovertempsource {out "OVER:SOUR %{CHA|CHB|CHC|CHD}";}
+getovertempsource {out "OVER:SOUR?"; in "%{CHA|CHB|CHC|CHD}";}
+
+setovertemp {out "OVER:TEMP %f";}
+getovertemp {out "OVER:TEMP?"; in "%s";}
+
+
+setloopsource{out "LOOP \$1:SOUR %{CHA|CHB|CHC|CHD}";}
+getloopsource{out "LOOP \$1:SOUR?";in "%{CHA|CHB|CHC|CHD}";}
+
+setloopsetp{out "LOOP \$1:SETP %f";}
+getloopsetp{out "LOOP \$1:SETP?"; in "%s";}
+
+getlooperr {out "LOOP \$1:ERR?"; in "%{--Htr OK--|-Overtemp-|OTDisconn |Htr_Low-R |Fan Fault }";}
+
+setloop1type{out "LOOP 1:TYP %{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}";}
+getloop1type{out "LOOP 1:TYP?"; in "%{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}";}
+
+setloop2type{out "LOOP 2:TYP %{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}";}
+getloop2type{out "LOOP 2:TYP?"; in "%{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT}";}
+
+setloop3type{out "LOOP 3:TYP %{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT|SCALE}";}
+getloop3type{out "LOOP 3:TYP?"; in "%{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT|SCALE}";}
+
+setloop4type{out "LOOP 4:TYP %{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT|SCALE}";}
+getloop4type{out "LOOP 4:TYP?"; in "%{OFF  |PID  |MAN  |TABLE|RAMPP|RAMPT|SCALE}";}
+
+getloop1range {out "LOOP 1:RANG?"; in "%{LOW|MID|HI }";}
+setloop1range {out "LOOP 1:RANG %{LOW|MID|HI }";}
+
+getloop2range {out "LOOP 2:RANG?"; in "%{LOW|HI }";}
+setloop2range {out "LOOP 2:RANG %{LOW|HI }";}
+
+getloop3range {out "LOOP 3:RANG?"; in "%{5V |10V}";}
+setloop3range {out "LOOP 3:RANG %{5V |10V}";}
+
+getloop4range {out "LOOP 4:RANG?"; in "%{5V |10V}";}
+setloop4range {out "LOOP 4:RANG %{5V |10V}";}
+
+setlooppgain{out "LOOP \$1:PGA %f";}
+getlooppgain{out "LOOP \$1:PGA?"; in "%s";}
+
+setloopigain{out "LOOP \$1:IGA %f";}
+getloopigain{out "LOOP \$1:IGA?"; in "%s";}
+
+setloopdgain{out "LOOP \$1:DGA %f";}
+getloopdgain{out "LOOP \$1:DGA?"; in "%s";}
+
+setlooppman{out "LOOP \$1:PMAN %f";}
+getlooppman{out "LOOP \$1:PMAN?"; in "%s";}
+
+setloop1load {out "LOOP 1:LOAD %{25|50}";}
+getloop1load {out "LOOP 1:LOAD?";in "%{25|50}";}
+
+
