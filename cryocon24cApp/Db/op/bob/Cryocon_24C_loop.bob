@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-27 18:53:47 by specadm-->
+<!--Saved on 2025-03-28 22:19:55 by specadm-->
 <display version="2.0.0">
   <name>Cryocon_24C_loop</name>
   <x>438</x>
@@ -12,6 +12,17 @@
   </background_color>
   <grid_visible>false</grid_visible>
   <grid_step_x>5</grid_step_x>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <x>5</x>
+    <width>505</width>
+    <height>126</height>
+    <line_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+  </widget>
   <widget type="label" version="2.0.0">
     <name>text #6</name>
     <text>Source</text>
@@ -391,7 +402,7 @@
   <widget type="label" version="2.0.0">
     <name>text #84</name>
     <text>Pmanual</text>
-    <x>247</x>
+    <x>243</x>
     <y>99</y>
     <width>64</width>
     <height>19</height>
@@ -407,7 +418,7 @@
     <x>483</x>
     <y>97</y>
     <width>15</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -424,7 +435,7 @@
     <x>232</x>
     <y>79</y>
     <width>8</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
@@ -441,7 +452,7 @@
     <x>229</x>
     <y>101</y>
     <width>13</width>
-    <height>18</height>
+    <height>19</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
