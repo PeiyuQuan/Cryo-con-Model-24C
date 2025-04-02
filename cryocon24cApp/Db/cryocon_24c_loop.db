@@ -26,9 +26,7 @@ record (mbbi, "$(P)$(M)getlooperr")
                 field(FRST, "Fan Fault")
 		field(SCAN, "10 second")
                 field(FLNK, "$(P)$(M)getloopsource")
-
         }
-
 
 record (mbbi, "$(P)$(M)getloopsource")
 	{
@@ -166,7 +164,6 @@ record (mbbi, "$(P)$(M)getloop3type")
                 field(FVST, "RAMPT")
 		field(SXST, "SCALE")
 		field(FLNK, "$(P)$(M)getloop4type")
-
         }
 
 record (mbbo, "$(P)$(M)setloop3type")
@@ -187,7 +184,6 @@ record (mbbo, "$(P)$(M)setloop3type")
                 field(FRST, "RAMPP")
                 field(FVST, "RAMPT")
 		field(SXST, "SCALE")
-
         }
 
 record (mbbi, "$(P)$(M)getloop4type")
@@ -209,7 +205,6 @@ record (mbbi, "$(P)$(M)getloop4type")
                 field(FVST, "RAMPT")
 		field(SXST, "SCALE")
 		field(FLNK, "$(P)$(M)getloop1range")
-
         }
 
 record (mbbo, "$(P)$(M)setloop4type")
@@ -381,5 +376,4 @@ record (bo, "$(P)$(M)setloop1load")
 		field(OUT, "@cryocon_24c.proto setloop1load($(N)) $(PORT)")
 		field(ZNAM, "25")
 		field(ONAM, "50")
-	}	
-
+	}
