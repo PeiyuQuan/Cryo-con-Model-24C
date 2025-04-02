@@ -1,5 +1,3 @@
-
-
 getIDN{out "*IDN?"; in "%25c";}
 setRST{out "*RST";}
 
