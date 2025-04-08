@@ -1,0 +1,1394 @@
+
+file {
+	name="/home/specadm/adls/Cryocon_24C.adl"
+	version=030118
+}
+display {
+	object {
+		x=837
+		y=136
+		width=575
+		height=510
+	}
+	clr=14
+	bclr=4
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=100
+		y=5
+		width=244
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Cryocon 24C temperature controller"
+}
+rectangle {
+	object {
+		x=286
+		y=258
+		width=280
+		height=105
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+rectangle {
+	object {
+		x=286
+		y=365
+		width=280
+		height=80
+	}
+	"basic attribute" {
+		clr=54
+		fill="outline"
+		width=2
+	}
+}
+composite {
+	object {
+		x=11
+		y=40
+		width=554
+		height=463
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=20
+				y=50
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Model"
+		}
+		"text update" {
+			object {
+				x=73
+				y=46
+				width=200
+				height=20
+			}
+			monitor {
+				chan="$(P)getIDN"
+				clr=14
+				bclr=33
+			}
+			align="horiz. centered"
+			limits {
+			}
+		}
+		text {
+			object {
+				x=324
+				y=45
+				width=80
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Controller"
+		}
+		"message button" {
+			object {
+				x=416
+				y=40
+				width=57
+				height=20
+			}
+			control {
+				chan="$(P)setRST"
+				clr=14
+				bclr=57
+			}
+			label="Reset"
+			press_msg="1"
+		}
+		text {
+			object {
+				x=17
+				y=104
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="TEMP"
+		}
+		"text update" {
+			object {
+				x=60
+				y=102
+				width=125
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M1)getinptem"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=187
+				y=102
+				width=40
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M1)getinpunit"
+				clr=14
+				bclr=47
+			}
+			limits {
+			}
+		}
+		menu {
+			object {
+				x=233
+				y=102
+				width=44
+				height=20
+			}
+			control {
+				chan="$(P)$(M1)setinpunit"
+				clr=14
+				bclr=16
+			}
+		}
+		text {
+			object {
+				x=17
+				y=134
+				width=80
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Loop Error"
+		}
+		"text update" {
+			object {
+				x=121
+				y=132
+				width=150
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M1)getlooperr"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=13
+				y=73
+				width=270
+				height=89
+			}
+			"basic attribute" {
+				clr=15
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M4)getinptem"
+			}
+		}
+		text {
+			object {
+				x=23
+				y=76
+				width=15
+				height=18
+			}
+			"basic attribute" {
+				clr=13
+			}
+			textix="A"
+		}
+		"related display" {
+			object {
+				x=178
+				y=77
+				width=87
+				height=20
+			}
+			display[0] {
+				label="Input A"
+				name="Cryocon_24C_inp.adl"
+				args="P=BL62:cryocon:,Title=Channel_A,M=m1:"
+			}
+			clr=13
+			bclr=4
+		}
+		"text update" {
+			object {
+				x=39
+				y=78
+				width=130
+				height=15
+			}
+			monitor {
+				chan="$(P)$(M1)getinpname"
+				clr=13
+				bclr=36
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=292
+				y=101
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="TEMP"
+		}
+		"text update" {
+			object {
+				x=335
+				y=99
+				width=125
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M2)getinptem"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=462
+				y=99
+				width=40
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M2)getinpunit"
+				clr=14
+				bclr=47
+			}
+			limits {
+			}
+		}
+		menu {
+			object {
+				x=508
+				y=99
+				width=44
+				height=20
+			}
+			control {
+				chan="$(P)$(M2)setinpunit"
+				clr=14
+				bclr=16
+			}
+		}
+		text {
+			object {
+				x=292
+				y=131
+				width=100
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Loop Error"
+		}
+		"text update" {
+			object {
+				x=396
+				y=129
+				width=150
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M2)getlooperr"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=288
+				y=71
+				width=267
+				height=89
+			}
+			"basic attribute" {
+				clr=15
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M4)getinptem"
+			}
+		}
+		text {
+			object {
+				x=303
+				y=76
+				width=15
+				height=18
+			}
+			"basic attribute" {
+				clr=13
+			}
+			textix="B"
+		}
+		"related display" {
+			object {
+				x=453
+				y=76
+				width=87
+				height=20
+			}
+			display[0] {
+				label="Input B"
+				name="Cryocon_24C_inp.adl"
+				args="P=BL62:cryocon:, Title= Channel_B,M=m2:"
+			}
+			clr=13
+			bclr=4
+		}
+		"text update" {
+			object {
+				x=320
+				y=77
+				width=130
+				height=15
+			}
+			monitor {
+				chan="$(P)$(M2)getinpname"
+				clr=13
+				bclr=36
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=16
+				y=196
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="TEMP"
+		}
+		"text update" {
+			object {
+				x=59
+				y=194
+				width=125
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M3)getinptem"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=186
+				y=194
+				width=40
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M3)getinpunit"
+				clr=14
+				bclr=47
+			}
+			limits {
+			}
+		}
+		menu {
+			object {
+				x=232
+				y=194
+				width=44
+				height=20
+			}
+			control {
+				chan="$(P)$(M3)setinpunit"
+				clr=14
+				bclr=16
+			}
+		}
+		text {
+			object {
+				x=16
+				y=226
+				width=100
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Loop Error"
+		}
+		"text update" {
+			object {
+				x=120
+				y=224
+				width=150
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M3)getlooperr"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=294
+				y=199
+				width=40
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="TEMP"
+		}
+		"text update" {
+			object {
+				x=337
+				y=197
+				width=125
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M4)getinptem"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=464
+				y=197
+				width=40
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M4)getinpunit"
+				clr=14
+				bclr=47
+			}
+			limits {
+			}
+		}
+		menu {
+			object {
+				x=507
+				y=197
+				width=44
+				height=20
+			}
+			control {
+				chan="$(P)$(M4)setinpunit"
+				clr=14
+				bclr=16
+			}
+		}
+		text {
+			object {
+				x=294
+				y=229
+				width=100
+				height=18
+			}
+			"basic attribute" {
+				clr=20
+			}
+			textix="Loop Error"
+		}
+		"text update" {
+			object {
+				x=398
+				y=227
+				width=150
+				height=20
+			}
+			monitor {
+				chan="$(P)$(M4)getlooperr"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=13
+				y=164
+				width=270
+				height=89
+			}
+			"basic attribute" {
+				clr=15
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M4)getinptem"
+			}
+		}
+		rectangle {
+			object {
+				x=287
+				y=164
+				width=267
+				height=92
+			}
+			"basic attribute" {
+				clr=15
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="$(P)$(M4)getinptem"
+			}
+		}
+		text {
+			object {
+				x=22
+				y=170
+				width=15
+				height=18
+			}
+			"basic attribute" {
+				clr=13
+			}
+			textix="C"
+		}
+		text {
+			object {
+				x=302
+				y=172
+				width=15
+				height=18
+			}
+			"basic attribute" {
+				clr=13
+			}
+			textix="D"
+		}
+		"related display" {
+			object {
+				x=182
+				y=169
+				width=87
+				height=20
+			}
+			display[0] {
+				label="Input C"
+				name="Cryocon_24C_inp.adl"
+				args="P=BL62:cryocon:,Title= Channel_C,M=m3:"
+			}
+			clr=13
+			bclr=4
+		}
+		"related display" {
+			object {
+				x=452
+				y=170
+				width=87
+				height=20
+			}
+			display[0] {
+				label="Input D"
+				name="Cryocon_24C_inp.adl"
+				args="P=BL62:cryocon:,Title=Channel_D,M=m4:"
+			}
+			clr=13
+			bclr=4
+		}
+		"text update" {
+			object {
+				x=37
+				y=169
+				width=130
+				height=15
+			}
+			monitor {
+				chan="$(P)$(M3)getinpname"
+				clr=13
+				bclr=36
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=316
+				y=171
+				width=130
+				height=15
+			}
+			monitor {
+				chan="$(P)$(M4)getinpname"
+				clr=13
+				bclr=36
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=12
+				y=255
+				width=270
+				height=105
+			}
+			"basic attribute" {
+				clr=54
+				fill="outline"
+				width=2
+			}
+		}
+		text {
+			object {
+				x=21
+				y=283
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Load"
+		}
+		"choice button" {
+			object {
+				x=57
+				y=283
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(M1)setloop1load"
+				clr=15
+				bclr=57
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=183
+				y=284
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M1)getloop1load"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=21
+				y=309
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Range"
+		}
+		menu {
+			object {
+				x=62
+				y=308
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)$(M1)setloop1range"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=183
+				y=308
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M1)getloop1range"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=48
+				y=263
+				width=60
+				height=15
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Loop 1"
+		}
+		"related display" {
+			object {
+				x=160
+				y=260
+				width=60
+				height=20
+			}
+			display[0] {
+				label="Loop 1"
+				name="Cryocon_24C_loop.adl"
+				args="P=BL62:cryocon:,Title= Loop 1,M=m1:"
+			}
+			clr=13
+			bclr=15
+			label="Loop1"
+		}
+		rectangle {
+			object {
+				x=12
+				y=364
+				width=270
+				height=80
+			}
+			"basic attribute" {
+				clr=54
+				fill="outline"
+				width=2
+			}
+		}
+		text {
+			object {
+				x=292
+				y=269
+				width=55
+				height=15
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Loop 2"
+		}
+		"related display" {
+			object {
+				x=440
+				y=266
+				width=60
+				height=20
+			}
+			display[0] {
+				label="Loop 2"
+				name="Cryocon_24C_loop.adl"
+				args="P=BL62:cryocon:,Title= Loop2, M=m2:"
+			}
+			clr=13
+			bclr=15
+			label="Loop2"
+		}
+		text {
+			object {
+				x=292
+				y=290
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Range"
+		}
+		"choice button" {
+			object {
+				x=339
+				y=289
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(M2)setloop2range"
+				clr=15
+				bclr=57
+			}
+			stacking="column"
+		}
+		text {
+			object {
+				x=21
+				y=334
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Type"
+		}
+		menu {
+			object {
+				x=62
+				y=333
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)$(M1)setloop1type"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=183
+				y=333
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M1)getloop1type"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=463
+				y=290
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M2)getloop2range"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=297
+				y=313
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Type"
+		}
+		menu {
+			object {
+				x=338
+				y=312
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)$(M2)setloop2type"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=459
+				y=312
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M2)getloop2type"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=290
+				y=372
+				width=60
+				height=15
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Loop 4"
+		}
+		"related display" {
+			object {
+				x=440
+				y=369
+				width=60
+				height=20
+			}
+			display[0] {
+				label="Loop 4"
+				name="Cryocon_24C_loop.adl"
+				args="P=BL62:cryocon:,Title=Loop 4,M=m4:"
+			}
+			clr=13
+			bclr=15
+			label="Loop4"
+		}
+		text {
+			object {
+				x=294
+				y=395
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Range"
+		}
+		"choice button" {
+			object {
+				x=341
+				y=394
+				width=120
+				height=23
+			}
+			control {
+				chan="$(P)$(M4)setloop4range"
+				clr=15
+				bclr=57
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=464
+				y=396
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M4)getloop4range"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=18
+				y=371
+				width=60
+				height=15
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Loop 3"
+		}
+		"related display" {
+			object {
+				x=160
+				y=368
+				width=60
+				height=20
+			}
+			display[0] {
+				label="Loop 3"
+				name="Cryocon_24C_loop.adl"
+				args="P=BL62:cryocon:,Title=Loop 3, M=m3:"
+			}
+			clr=13
+			bclr=15
+			label="Loop3"
+		}
+		text {
+			object {
+				x=19
+				y=393
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Range"
+		}
+		"choice button" {
+			object {
+				x=66
+				y=392
+				width=120
+				height=23
+			}
+			control {
+				chan="$(P)$(M3)setloop3range"
+				clr=15
+				bclr=57
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=187
+				y=395
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M3)getloop3range"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=21
+				y=420
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Type"
+		}
+		menu {
+			object {
+				x=62
+				y=419
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)$(M3)setloop3type"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=183
+				y=419
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M3)getloop3type"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=302
+				y=423
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Type"
+		}
+		menu {
+			object {
+				x=343
+				y=422
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)$(M4)setloop4type"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=464
+				y=422
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)$(M4)getloop4type"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=22
+				y=454
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Over_Tem_enable"
+		}
+		"choice button" {
+			object {
+				x=147
+				y=453
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)setovertemenable"
+				clr=15
+				bclr=57
+			}
+			stacking="column"
+		}
+		"text update" {
+			object {
+				x=272
+				y=454
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)getovertemenable"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=22
+				y=478
+				width=35
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Over_Tem_Source"
+		}
+		menu {
+			object {
+				x=147
+				y=477
+				width=110
+				height=20
+			}
+			control {
+				chan="$(P)setovertempsource"
+				clr=54
+				bclr=30
+			}
+		}
+		"text update" {
+			object {
+				x=272
+				y=477
+				width=80
+				height=18
+			}
+			monitor {
+				chan="$(P)getovertempsource"
+				clr=54
+				bclr=30
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=362
+				y=468
+				width=60
+				height=18
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Set Temp"
+		}
+		"text entry" {
+			object {
+				x=427
+				y=457
+				width=127
+				height=21
+			}
+			control {
+				chan="$(P)setovertemp"
+				clr=14
+				bclr=57
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=429
+				y=481
+				width=127
+				height=18
+			}
+			monitor {
+				chan="$(P)getovertemp"
+				clr=14
+				bclr=33
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=11
+				y=448
+				width=554
+				height=55
+			}
+			"basic attribute" {
+				clr=20
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="$(P)setovertemp"
+			}
+		}
+	}
+}
